@@ -1,0 +1,105 @@
+\documentclass[letter, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\setlength\topmargin{0pt}
+\addtolength\topmargin{-\headheight}
+\addtolength\topmargin{-\headsep}
+\setlength\oddsidemargin{0pt}
+\setlength\textwidth{\paperwidth}
+\addtolength\textwidth{-2in}
+\setlength\textheight{\paperheight}
+\addtolength\textheight{-2in}
+
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+\large\textbf{Cultural Assignment} \hfill \textbf{Joseph Martinsen} \\
+\normalsize CSCE 221-506 \hfill Due Date: 01/24/2017 \\
+Dr. Teresa Leyk \\
+% TA: Adam Sumner \hfill Due Date: XX/XX/XX
+
+\centerline{\textbf{\huge Analysis of Selection of Query}}
+% \centerline{\textbf{\large Utilize Trust-Based Algorithms to Propagate Trust}}
+
+
+\section*{Introduction}
+\vspace{-10pt}
+\begin{doublespace}
+In this day and age, the world wide web has truly gone global. In 2013 it was reported that Google, Amazon, Facebook, and Microsoft had 1,200 petabytes stored online \cite{sciencefocus}. This number has only grown since then. With all this data, the designing and implementation of algorithms in order to search through all this information has proved to be the perfect solution to this issue.
+\end{doublespace}
+
+\vspace{-10pt}
+
+\section*{Algorithm Description and Implementation}
+%\textit{Write about a data structure and/or algorithm that is being referenced in the article. Then describe how it is implemented. If there is no such explicit description in the article, provide your idea as to how this would be implemented or do some research and find a possible implementation.}
+\vspace{-10pt}
+\begin{doublespace}
+% Example of a Citation\cite[p.219]{Query}. Here's Another Citation\cite{Query} \\
+"The objective of a search engine is to investigate good superiority resultant pages" \cite[pg. 1]{Query} taking into account the fact that spam filtering is very important but not the only factor. The algorithm described in the article attempts to return to the user the best search results by combining trust with authority.
+
+The biggest wrinkle in the goal of returning the best results is correctly identifying and then filtering out spam. As Dr. Pruthi put it, the biggest challenge for a search engine is the fight with web spam \cite[pg. 2]{Query}. In order to combat this, pages are assigned a Trust Rank as follows. Extremely trustworthy sites are assigned to generate seed nodes. Each of these selected sites are assigned a non-zero trust score while the rest of the site are set to a zero trust score as their initial value. Next, a biased Page Rank is second-hand to circulate preliminary trust values to linked to the outward sites \cite[pg. 2]{Query}. This method results in better websites having a good trust score while spam websites will have lower trust marks. The following equation is the Trust Rank formula.
+
+\begin{equation}
+\label{eq:1} TR(i) = d \sum_{j:j \rightarrow i} \dfrac{TR(j)}{O(j)} +
+\left\{ \begin{array}{ll}
+                   (1-d)\dfrac{1}{|\tau|}   & \mbox{if $i \in \tau$,}\\
+                   0                        & \mbox{if $i \notin \tau$},
+                 \end{array}
+         \right. 
+\end{equation}
+
+Where TR$(i)$ is the Trust Rank score for page $i$ and $\tau$ is the seed set. TR$(i)$ will be initialized as $(1-d)\dfrac{1}{|\tau|}$ if $i$ is in the seed set and 0 if it is not.
+
+The relative spam mass of a given page $i$ is described in the following equation.
+
+\begin{equation}
+  \label{eq:2} SP(i) = \dfrac{PR(i) - TR(i)}{PR(i)}
+\end{equation}
+
+This equation return the division of a page $i$'s Page Rank due to the contribution of linked spam pages. This incorporation of Trust Rank into Page Rank allows for spam pages to receive penalties while spam free web pages do not receive any rank deductions \cite{Query}.
+\end{doublespace}
+
+\vspace{-7pt}
+\section*{Algorithm Summary}
+\vspace{-10pt}
+% \textit{In your own worded summary include the discussion about the algorithms and data structures that you believe were used in an application described in the paper and provide an answer to the question "What did I learn from the paper about an impact of this application on the society or the economy?"}
+\begin{doublespace}
+In this article, there was not as much focus on any data structures as compared to the algorithm but it from my understanding of the algorithm, the algorithm would be deemed useless without some sort of data structure that allows for a user to easily perform queries over.
+
+As for the algorithm, an example should be able to show how the algorithm functions. The example uses Yahoo! Research Web collection data-set which will be referred to as UK-2007 \cite{Yahoo!}.This data set contains 100 million total pages, 114,529 hosts, 6,479 labeled as trust worthy sources, and $6\%$ are spam. Queries used are highly used spammed words such as money, home-loan, and lottery.
+
+The following are the procedures and results of the study conducted by Dr. Pruthi as I interpreted (very intriguing article but poorly used grammar).
+\end{doublespace}
+\vspace{-7pt}
+
+\begin{enumerate}[label=\hspace{15pt} \bf Step \arabic*: ]
+  \item Identify the most famous and current 100 terms usually used as meta-keywords in website header files used by the sites marked as spam (i.e money, home-loan, and lottery)
+  \item Add up the number of results for all the queries
+  \item Select the 90 most popular queries from AOL Search
+  \item Follow the procedure for different types of comparisons.
+\end{enumerate}
+\vspace{-7pt}
+\begin{doublespace}
+\hspace{14pt} The results found that that the combination of Trust Rank and Page Rank returned an improved filtered result for the top 10 search results compared to regular searches.
+\end{doublespace}
+\vspace{-10pt}
+\begin{thebibliography}{9}
+% \bibitem{Robotics} Fred G. Martin \emph{Robotics Explorations: A Hands-On Introduction to Engineering}. New Jersey: Prentice Hall.
+% \bibitem{Flueck}  Flueck, Alexander J. 2005. \emph{ECE 100}[online]. Chicago: Illinois Institute of Technology, Electrical and Computer Engineering Department, 2005 [cited 30
+% August 2005]. Available from World Wide Web: (http://www.ece.iit.edu/~flueck/ece100).
+
+\bibitem{sciencefocus}Mitchell, Gareth. \textit{How Much Data Is on the Internet?} Science Focus. Immediate Media Co, 23 Jan. 2013. Web. 24 Jan. 2017.
+
+\bibitem{Query} Pruthi, Dr. Jyoti \emph{Selection of Query - Utilize Trust-Based Algorithms to Propagate Trust}. India: 2016 International Conference on Computing for Sustainable Global Development (INDIACom), 2016
+%http://ieeexplore.ieee.org/document/7724985/citations
+
+\bibitem{Yahoo!} Yahoo! Research. Web Collection UK-2007. \\ http://barcelona.research.yahoo.net/webspam/datasets/uk2007.
+\end{thebibliography}
+
+\end{document}
