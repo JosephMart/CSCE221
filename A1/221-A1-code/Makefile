@@ -4,5 +4,7 @@ main.o: main.cpp my_string.cpp my_string.h
 	c++ -std=c++11 -c -g main.cpp
 my_string.o: my_string.cpp my_string.h
 	c++ -std=c++11 -c -g my_string.cpp
+run:
+	./my_string
 clean:
 	rm *.o my_string

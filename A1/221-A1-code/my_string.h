@@ -24,9 +24,9 @@ public:
     // insert(int i, std::string s);
 
     char& operator[](int i) const;
-    void operator+=(const my_string& q);
-    void operator+=(char const c);
-    void operator=(const my_string & q);
+    my_string& operator+=(const my_string& q);
+    my_string& operator+=(char const c);
+    my_string& operator=(const my_string & q);
     friend std::istream& operator>>(std::istream& is, my_string& q);
 };
 

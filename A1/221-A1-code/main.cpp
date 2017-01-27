@@ -12,7 +12,7 @@ int main()
     // declare a string v1 using a default constructor
     my_string v1;
     // declare two strings: v2, v3 and initialize them with C-strings
-    my_string v2("firstf");
+    my_string v2("first");
     my_string v3("second");
     // append the strings v2 and v3 to v1 and separate them by a whitespace
     v1 += v2;

@@ -58,7 +58,7 @@ char& my_string::at(int i) const {
     }
 }
 
-void my_string::operator=(const my_string& q) {
+my_string& my_string::operator=(const my_string& q) {
     if (q.capacity() > this->cap ) {
         delete this->ptr;
         this->ptr = new char[q.capacity()];
@@ -70,9 +70,10 @@ void my_string::operator=(const my_string& q) {
     for (int i = 0; i < q.capacity(); i++) {
         this->ptr[i] = q[i];
     }
+    return *this;
 }
 
-void my_string::operator+=(const my_string& q) {
+my_string& my_string::operator+=(const my_string& q) {
 
     if ((q.size() + this->sz) > this->cap) {
         my_string temp = *this;
@@ -90,31 +91,28 @@ void my_string::operator+=(const my_string& q) {
         this->sz++;
         this->ptr[this->sz] = q[i];
     }
+    return *this;
 }
 
-void my_string::operator+=(char const c) {
+my_string& my_string::operator+=(char const c) {
     int c_size = 1;
-    // while (c[c_size] != '\0') {
-    //     c_size++;
-    // }
 
     if ((c_size + this->sz) > this->cap) {
         my_string temp = *this;
         delete this->ptr;
         // Assign new size
-        this->cap = this->sz + c_size;
+        this->cap *= 2;
         this->ptr = new char[this->cap];
 
-        std::cout << this->sz << '\n';
         for (int i = 0; i < temp.size(); i++) {
             this->ptr[i] = temp[i];
         }
     }
 
-    for (int i = 0; i < c_size; i++) {
-        this->sz++;
-        this->ptr[this->sz] = c;
-    }
+    this->ptr[this->sz] = c;
+    this->sz++;
+
+    return *this;
 }
 
 std::istream& operator>>(std::istream& is, my_string& q) {
