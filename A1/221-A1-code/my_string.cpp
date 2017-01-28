@@ -51,10 +51,23 @@ char& my_string::operator[](int i) const {
 }
 
 char& my_string::at(int i) const {
-    if (i <= this->capacity()+1 && i >= 0) {
+    if (i <= this->capacity()+1 && i >= 0)
         return this->ptr[i];
-    } else {
-        throw std::out_of_range("Out of range");
+
+    throw std::out_of_range("Out of range");
+}
+
+void my_string::resize(int size) {
+    if (size > this->cap) {
+        my_string temp = *this;
+        delete this->ptr;
+        // Assign new size
+        this->cap *= 2;
+        this->ptr = new char[this->cap];
+
+        for (int i = 0; i < temp.size(); i++) {
+            this->ptr[i] = temp[i];
+        }
     }
 }
 
@@ -95,23 +108,9 @@ my_string& my_string::operator+=(const my_string& q) {
 }
 
 my_string& my_string::operator+=(char const c) {
-    int c_size = 1;
-
-    if ((c_size + this->sz) > this->cap) {
-        my_string temp = *this;
-        delete this->ptr;
-        // Assign new size
-        this->cap *= 2;
-        this->ptr = new char[this->cap];
-
-        for (int i = 0; i < temp.size(); i++) {
-            this->ptr[i] = temp[i];
-        }
-    }
-
+    this->resize(1);
     this->ptr[this->sz] = c;
     this->sz++;
-
     return *this;
 }
 

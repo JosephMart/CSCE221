@@ -21,6 +21,7 @@ public:
     int capacity() const { return cap; }
     bool empty() const { return !sz; }
     char& at(int i) const;
+    void resize(int size);
     // insert(int i, std::string s);
 
     char& operator[](int i) const;
