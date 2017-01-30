@@ -22,12 +22,12 @@ public:
     bool empty() const { return !sz; }
     char& at(int i) const;
     void resize(int size);
-    // insert(int i, std::string s);
 
     char& operator[](int i) const;
     my_string& operator+=(const my_string& q);
     my_string& operator+=(char const c);
     my_string& operator=(const my_string & q);
+    my_string& insert(int i, const my_string& s);
     friend std::istream& operator>>(std::istream& is, my_string& q);
 };
 

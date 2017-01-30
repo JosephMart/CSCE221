@@ -6,12 +6,15 @@ my_string::my_string() : sz(0), cap(0) {
     // ptr[0] = '';
 }
 
-my_string::my_string(int n) {
+my_string::my_string(int n)
+{
+    // Set initial values
     this->ptr = new char[n];
     this->sz = 0;
     this->cap = n;
 }
-my_string::my_string(char const c[]){
+my_string::my_string(char const c[])
+{
     this->sz = 0;
 
     while (c[this->sz] != '\0') {
@@ -27,7 +30,8 @@ my_string::my_string(char const c[]){
     }
 }
 
-my_string::my_string(const my_string & q) {
+my_string::my_string(const my_string & q)
+{
     this->ptr = new char[q.capacity()];
     this->sz = q.size();
     this->cap = q.capacity();
@@ -37,27 +41,32 @@ my_string::my_string(const my_string & q) {
     }
 }
 
-my_string::~my_string() {
+my_string::~my_string()
+{
     if (ptr != NULL) {
         delete[] ptr;
         ptr = NULL;
     }
 }
 
-char& my_string::operator[](int i) const {
-    char *temp = this->ptr;
-
-    return *(temp += i);
-}
-
-char& my_string::at(int i) const {
+char& my_string::at(int i) const
+{
     if (i <= this->capacity()+1 && i >= 0)
         return this->ptr[i];
 
     throw std::out_of_range("Out of range");
 }
 
-void my_string::resize(int size) {
+char& my_string::operator[](int i) const
+{
+    char *temp = this->ptr;
+
+    return *(temp += i);
+}
+
+
+void my_string::resize(int size)
+{
     if (size > this->cap) {
         my_string temp = *this;
         delete this->ptr;
@@ -71,7 +80,8 @@ void my_string::resize(int size) {
     }
 }
 
-my_string& my_string::operator=(const my_string& q) {
+my_string& my_string::operator=(const my_string& q)
+{
     if (q.capacity() > this->cap ) {
         delete this->ptr;
         this->ptr = new char[q.capacity()];
@@ -86,8 +96,8 @@ my_string& my_string::operator=(const my_string& q) {
     return *this;
 }
 
-my_string& my_string::operator+=(const my_string& q) {
-
+my_string& my_string::operator+=(const my_string& q)
+{
     if ((q.size() + this->sz) > this->cap) {
         my_string temp = *this;
         delete this->ptr;
@@ -99,6 +109,7 @@ my_string& my_string::operator+=(const my_string& q) {
             this->ptr[i] = temp[i];
         }
     }
+    // this->resize(q.size() + this->sz);
 
     for (int i = 0; i <= q.size(); i++) {
         this->sz++;
@@ -107,14 +118,16 @@ my_string& my_string::operator+=(const my_string& q) {
     return *this;
 }
 
-my_string& my_string::operator+=(char const c) {
+my_string& my_string::operator+=(char const c)
+{
     this->resize(1);
     this->ptr[this->sz] = c;
     this->sz++;
     return *this;
 }
 
-std::istream& operator>>(std::istream& is, my_string& q) {
+std::istream& operator>>(std::istream& is, my_string& q)
+{
     int c_size = 1;
     if ((c_size + q.sz) > q.cap) {
         my_string temp = q;
@@ -132,7 +145,8 @@ std::istream& operator>>(std::istream& is, my_string& q) {
     return is;
 }
 
-std::ostream& operator<<(std::ostream& os, const my_string& q) {
+std::ostream& operator<<(std::ostream& os, const my_string& q)
+{
     for (int i = 0; i <= q.size(); i++) {
         os << q.at(i);
     }
