@@ -114,6 +114,32 @@ my_string& my_string::operator+=(char const c)
     return *this;
 }
 
+my_string& my_string::insert(int pos, const my_string& s)
+{
+    // temp my_string to hold char after pos
+    my_string temp;
+
+    for (int i = pos; i < this->sz; i++) {
+        temp += this->ptr[i];
+    }
+
+
+    this->resize(this->sz += s.size());
+
+    // add new my_string s
+    for (int i = 0; i < s.size(); i++) {
+        this->ptr[pos + i] = s[i];
+    }
+
+    for (int i = 0; i < temp.size(); i++) {
+        this->ptr[pos + s.size() + i] = temp[i];
+    }
+
+
+
+    return *this;
+}
+
 std::istream& operator>>(std::istream& is, my_string& q)
 {
     int c_size = 1;
