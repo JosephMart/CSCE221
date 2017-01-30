@@ -100,8 +100,8 @@ my_string& my_string::operator+=(const my_string& q)
     this->resize(this->sz + q.capacity());
 
     for (int i = 0; i <= q.size(); i++) {
-        this->sz++;
         this->ptr[this->sz] = q[i];
+        this->sz++;
     }
     return *this;
 }
@@ -132,10 +132,8 @@ my_string& my_string::insert(int pos, const my_string& s)
     }
 
     for (int i = 0; i < temp.size(); i++) {
-        this->ptr[pos + s.size() + i + 1] = temp[i];
+        this->ptr[pos + s.size() + i] = temp[i];
     }
-
-
 
     return *this;
 }

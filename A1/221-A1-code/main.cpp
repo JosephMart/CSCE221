@@ -65,7 +65,7 @@ int main()
     my_string v5a("ly");
     cout << "v5.insert(5, \"ly\") and v5.insert(14, \"ly\"): \n";
     v5.insert(5, v5a);
-    // v5.insert(14, v5a);
+    v5.insert(14, v5a);
     // display v5
     cout << "v5 = " << v5 << endl;
     cout << endl;
