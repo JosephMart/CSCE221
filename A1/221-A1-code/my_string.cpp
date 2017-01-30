@@ -132,7 +132,7 @@ my_string& my_string::insert(int pos, const my_string& s)
     }
 
     for (int i = 0; i < temp.size(); i++) {
-        this->ptr[pos + s.size() + i] = temp[i];
+        this->ptr[pos + s.size() + i + 1] = temp[i];
     }
 
 
