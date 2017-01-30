@@ -5,6 +5,7 @@
 using namespace std;
 #include "my_string.h"
 #include <iostream>
+#include <stdexcept>
 
 int main()
   try{

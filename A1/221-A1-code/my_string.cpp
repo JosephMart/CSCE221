@@ -60,7 +60,6 @@ char& my_string::at(int i) const
 char& my_string::operator[](int i) const
 {
     char *temp = this->ptr;
-
     return *(temp += i);
 }
 
@@ -69,9 +68,9 @@ void my_string::resize(int size)
 {
     if (size > this->cap) {
         my_string temp = *this;
-        delete this->ptr;
+        delete[] this->ptr;
         // Assign new size
-        this->cap *= 2;
+        this->cap = 2*(this->cap + size+1);
         this->ptr = new char[this->cap];
 
         for (int i = 0; i < temp.size(); i++) {
@@ -83,7 +82,7 @@ void my_string::resize(int size)
 my_string& my_string::operator=(const my_string& q)
 {
     if (q.capacity() > this->cap ) {
-        delete this->ptr;
+        delete[] this->ptr;
         this->ptr = new char[q.capacity()];
     }
 
@@ -98,18 +97,7 @@ my_string& my_string::operator=(const my_string& q)
 
 my_string& my_string::operator+=(const my_string& q)
 {
-    if ((q.size() + this->sz) > this->cap) {
-        my_string temp = *this;
-        delete this->ptr;
-        // Assign new size
-        this->cap = this->sz + q.capacity()+1;
-        this->ptr = new char[this->cap];
-
-        for (int i = 0; i < temp.size(); i++) {
-            this->ptr[i] = temp[i];
-        }
-    }
-    // this->resize(q.size() + this->sz);
+    this->resize(this->sz + q.capacity());
 
     for (int i = 0; i <= q.size(); i++) {
         this->sz++;
