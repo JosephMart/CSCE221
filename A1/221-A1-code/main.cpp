@@ -73,27 +73,27 @@ int main()
     // // declare and create an empty string v6 and initialize it with an input stream
     // // a whitespace terminates the input stream
     my_string v6;
-    // cout << "Enter a string:\n";
-    // cin >> v6;
+    cout << "Enter a string:\n";
+    cin >> v6;
     // display v6
-    // cout << "v6 = " << v6 << endl;
+    cout << "v6 = " << v6 << endl;
     //
     // create v7 and initialize it to v6
     my_string v7(v6);
     // append v2
     v7 += v2;
     // // insert a whitespace
-    // v7.insert(v6.size(), my_string(" "));
+    v7.insert(v6.size(), my_string(" "));
     cout << "v6 + \" \" + v2 = " << v7 << endl;
-    //
-    // // create v8 and initialize it with v6
+
+    // create v8 and initialize it with v6
     my_string v8(v6);
-    // // append the last character of v6
+    // append the last character of v6
     v8 += v6[v6.size()-1];
-    // // display v8
+    // display v8
     cout << "v6 + last char of v6 = " << v8 << endl;
     cout << endl;
-
+    
     return 0;
   }
   // catching an exception

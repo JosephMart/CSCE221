@@ -2,6 +2,7 @@
 #define MY_STRING
 
 #include <iostream>
+#include <stdexcept>
 
 class my_string
 {
@@ -32,6 +33,4 @@ public:
 };
 
 std::ostream& operator<<(std::ostream& os, const my_string& q);
-
-
 #endif

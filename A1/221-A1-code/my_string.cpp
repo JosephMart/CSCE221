@@ -1,9 +1,7 @@
 #include "my_string.h"
-#include <stdexcept>
 
 my_string::my_string() : sz(0), cap(0) {
-    ptr = new char[0];
-    // ptr[0] = '';
+    ptr = NULL;
 }
 
 my_string::my_string(int n)
@@ -13,6 +11,7 @@ my_string::my_string(int n)
     this->sz = 0;
     this->cap = n;
 }
+
 my_string::my_string(char const c[])
 {
     this->sz = 0;
@@ -43,9 +42,9 @@ my_string::my_string(const my_string & q)
 
 my_string::~my_string()
 {
-    if (ptr != NULL) {
+    if (ptr != nullptr) {
         delete[] ptr;
-        ptr = NULL;
+        ptr = nullptr;
     }
 }
 
@@ -66,11 +65,11 @@ char& my_string::operator[](int i) const
 
 void my_string::resize(int size)
 {
-    if (size > this->cap) {
+    if (size >= this->cap) {
         my_string temp = *this;
         delete[] this->ptr;
         // Assign new size
-        this->cap = 2*(this->cap + size+1);
+        this->cap = 2*(size+1);
         this->ptr = new char[this->cap];
 
         for (int i = 0; i < temp.size(); i++) {
@@ -81,6 +80,8 @@ void my_string::resize(int size)
 
 my_string& my_string::operator=(const my_string& q)
 {
+    if (this == &q) return *this;
+
     if (q.capacity() > this->cap ) {
         delete[] this->ptr;
         this->ptr = new char[q.capacity()];
@@ -89,7 +90,7 @@ my_string& my_string::operator=(const my_string& q)
     this->cap = q.capacity();
     this->sz = q.size();
 
-    for (int i = 0; i < q.capacity(); i++) {
+    for (int i = 0; i < q.size(); i++) {
         this->ptr[i] = q[i];
     }
     return *this;
@@ -97,9 +98,9 @@ my_string& my_string::operator=(const my_string& q)
 
 my_string& my_string::operator+=(const my_string& q)
 {
-    this->resize(this->sz + q.capacity());
+    this->resize(this->sz + q.size());
 
-    for (int i = 0; i <= q.size(); i++) {
+    for (int i = 0; i < q.size(); i++) {
         this->ptr[this->sz] = q[i];
         this->sz++;
     }
@@ -108,7 +109,7 @@ my_string& my_string::operator+=(const my_string& q)
 
 my_string& my_string::operator+=(char const c)
 {
-    this->resize(1);
+    this->resize(this->sz + 1);
     this->ptr[this->sz] = c;
     this->sz++;
     return *this;
@@ -116,50 +117,51 @@ my_string& my_string::operator+=(char const c)
 
 my_string& my_string::insert(int pos, const my_string& s)
 {
-    // temp my_string to hold char after pos
-    my_string temp;
+    if(pos >= 0 && pos <= sz)
+    {
+        // temp my_string to hold char after pos
+        my_string temp;
 
-    for (int i = pos; i < this->sz; i++) {
-        temp += this->ptr[i];
+        for (int i = pos; i < this->sz; i++) {
+            temp += this->ptr[i];
+        }
+
+        this->resize(this->sz += s.size());
+
+        // add new my_string s
+        for (int i = 0; i < s.size(); i++) {
+            this->ptr[pos + i] = s[i];
+        }
+
+        // Add end of string
+        for (int i = 0; i < temp.size(); i++) {
+            this->ptr[pos + s.size() + i] = temp[i];
+        }
+
+        return *this;
+    } else
+    {
+        throw std::out_of_range("Out of range");
     }
-
-
-    this->resize(this->sz += s.size());
-
-    // add new my_string s
-    for (int i = 0; i < s.size(); i++) {
-        this->ptr[pos + i] = s[i];
-    }
-
-    for (int i = 0; i < temp.size(); i++) {
-        this->ptr[pos + s.size() + i] = temp[i];
-    }
-
-    return *this;
 }
 
 std::istream& operator>>(std::istream& is, my_string& q)
 {
-    int c_size = 1;
-    if ((c_size + q.sz) > q.cap) {
-        my_string temp = q;
-        delete q.ptr;
-        // Assign new size
-        q.cap = q.sz + c_size;
-        q.ptr = new char[q.cap];
+    char c;
 
-        for (int i = 0; i < temp.size(); i++) {
-            q.ptr[i] = temp[i];
-        }
+    while (c = is.get()) {
+        if (c == '\n' || c == ' ') break;
+
+        q.resize(q.sz + 1);
+        q[q.sz] = c;
+        q.sz++;
     }
-    is >> q.ptr[q.sz];
-
     return is;
 }
 
 std::ostream& operator<<(std::ostream& os, const my_string& q)
 {
-    for (int i = 0; i <= q.size(); i++) {
+    for (int i = 0; i < q.size(); i++) {
         os << q.at(i);
     }
     return os;
