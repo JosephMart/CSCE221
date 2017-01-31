@@ -11,6 +11,8 @@ private:
     int sz;
     int cap;
 
+    void resize(int size);
+
 public:
     my_string();
     my_string(int n);
@@ -22,7 +24,6 @@ public:
     int capacity() const { return cap; }
     bool empty() const { return !sz; }
     char& at(int i) const;
-    void resize(int size);
 
     char& operator[](int i) const;
     my_string& operator+=(const my_string& q);
