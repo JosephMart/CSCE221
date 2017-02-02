@@ -153,10 +153,19 @@ my_string& my_string::insert(int pos, const my_string& s)
 std::istream& operator>>(std::istream& is, my_string& q)
 {
     char c;
+    bool first = true;
 
     while (c = is.get()) {
-        if (c == '\n' || c == ' ') break;
+        if (c == '\n' || c == ' '){
+            if (first) {
+                q.resize(q.sz + 1);
+                q[q.sz] = c;
+                q.sz++;
+            }
+            break;
+        }
 
+        if (first) first = false;
         q.resize(q.sz + 1);
         q[q.sz] = c;
         q.sz++;

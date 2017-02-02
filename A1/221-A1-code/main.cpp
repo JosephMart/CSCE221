@@ -93,7 +93,7 @@ int main()
     // display v8
     cout << "v6 + last char of v6 = " << v8 << endl;
     cout << endl;
-    
+
     return 0;
   }
   // catching an exception

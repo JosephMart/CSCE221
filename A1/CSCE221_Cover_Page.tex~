@@ -1,0 +1,76 @@
+%% LyX 2.2.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=0in}
+\pagestyle{empty}
+\usepackage{babel}
+\usepackage[unicode=true]
+ {hyperref}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\begin{document}
+
+\title{CSCE 221 Cover Page\\
+ Homework Assignment \#~~~~ }
+
+\author{First Name:~~~~~~~~~~~~~~~~~Last Name: ~~~~~~~~~~~~~~~~~~~~~~UIN:~~~~~~~~~~~~~~}
+
+\date{User Name: ~~~~~~~~~~~~~~~~~~~~~~E-mail address:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\medskip{}
+}
+\maketitle
+\begin{quotation}
+Please list all sources in the table below including web pages which
+you used to solve or implement the current homework. If you fail to
+cite sources you can get a lower number of points or even zero, read
+more in the Aggie Honor System Office \href{http://aggiehonor.tamu.edu/}{http://aggiehonor.tamu.edu/}\medskip{}
+\medskip{}
+\end{quotation}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Type of sources  & ~~~~~~~~~~~~~~~~~~ & ~~~~~~~~~~~~~~~~~~ & ~~~~~~~~~~~~~~~~~~ & ~~~~~~~~~~~~~~~~~~ & ~~~~~~~~~~~~~~~~~~\tabularnewline
+ &  &  &  &  & \tabularnewline
+\hline 
+\hline 
+People &  &  &  &  & \tabularnewline
+ &  &  &  &  & \tabularnewline
+\hline 
+Web pages (provide URL)  &  &  &  &  & \tabularnewline
+ &  &  &  &  & \tabularnewline
+\hline 
+Printed material &  &  &  &  & \tabularnewline
+ &  &  &  &  & \tabularnewline
+\hline 
+Other Sources  &  &  &  &  & \tabularnewline
+ &  &  &  &  & \tabularnewline
+\hline 
+\end{tabular}
+
+\date{\medskip{}
+\medskip{}
+}
+\begin{quotation}
+I certify that I have listed all the sources that I used to develop
+the solutions/code to the submitted work.
+
+\textquotedblleft \emph{On my honor as an Aggie, I have neither given
+nor received any unauthorized help on this academic work.}\textquotedblright{} 
+\end{quotation}
+
+\date{\medskip{}
+\medskip{}
+}
+
+\begin{tabular}{ccccc}
+Your Name (signature) & ~~~~~~~~~~~~~~~~~~~~~~~~~~~ & ~~~~~~~~~~~~~~~~~~~~~ & Date  & ~~~~~~~~~~~~~~~~~~~~\tabularnewline
+\end{tabular}
+\end{document}
