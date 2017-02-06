@@ -2,64 +2,53 @@
 #include <vector>
 #include <fstream>
 #include <stdexcept>
+#include <math.h>
 
 // Sources
 // https://www.youtube.com/watch?v=keEcyZfrmxY
 
 void readFile(std::vector<int>* v, std::string fileName);
+void runSearch(std::vector<int> v, int value);
 void results(int value, int mid, int comp, bool found, std::vector<int> v);
+void checkSort(std::vector<int> v);
 
 int main(int argc, char const *argv[]) {
 	try{
 
 		std::vector<int> v;
-		bool assend = true;
-		bool dessend = true;
-		bool found = false;
-		int low = 0;
-		int high = 0;
-		int mid = 0;
+
 		int value = 10;
-		int comp = 0;
 
-		readFile(&v, "in.txt");
-		high = v.size() - 1;
+		readFile(&v, "up.txt");
+		checkSort(v);
 
-		// Confrim that vector is sorted
-		for (int i = 1; i < v.size(); i++)
-		{
-			if (v.at(i-1) > v.at(i))
-				assend = false;
+		std::cout << "Running comparisions for inc values" << '\n';
+		for (int i = 0; i < 12; i++) {
+			std::vector<int> temp;
+			int value = pow(2,i);
 
-			if (v.at(i-1) < v.at(i))
-				dessend = false;
-
-			if (!assend && !dessend)
-				throw std::runtime_error("Numbers are not sorted");
+			for (int j = 0; j < value; j++) {
+				temp.push_back(v.at(j));
+			}
+			runSearch(temp, value);
+			temp.clear();
 		}
 
-		// Ask user what value to search for
-		std::cout << "Enter number to search: ";
-		std::cin >> value;
+		v.clear();
+		readFile(&v, "down.txt");
+		checkSort(v);
+		std::cout << "\n\nRunning comparisions for dec values" << '\n';
 
-		// Binary Search
-		while (low <= high && !found) {
-			comp++;
-			mid = (low + high) / 2;
-			if (v[mid] > value){
-				high = mid - 1;
-				comp++;
-			} else if (v[mid] < value) {
-				low = mid + 1;
-				comp += 2;
+		for (int i = 0; i < 12; i++) {
+			std::vector<int> temp;
+			int value = pow(2,i);
+
+			for (int i = 0; i < value; i++) {
+				temp.push_back(v.at(i));
 			}
-			else {
-				found = true;
-				comp += 2;
-			}
+			runSearch(temp, value);
+			temp.clear();
 		}
-
-		results(value, mid, comp, found, v);
 
 		return 0;
 	}
@@ -87,20 +76,65 @@ void readFile(std::vector<int>* v, std::string fileName) {
 void results(int value, int mid, int comp, bool found, std::vector<int> v) {
 	// Output resultant info
 	std::cout << "\nSearching for: " << value << '\n';
-	std::cout << "in { ";
-	for (int i = 0; i < v.size(); i++) {
-		std::cout << v.at(i);
-		if (i != v.size() - 1) {
-			std::cout << ",";
-		}
-		std::cout << " ";
-	}
-	std::cout << "}" << '\n';
+	// std::cout << "in { ";
+	// for (int i = 0; i < v.size(); i++) {
+	// 	std::cout << v.at(i);
+	// 	if (i != v.size() - 1) {
+	// 		std::cout << ",";
+	// 	}
+	// 	std::cout << " ";
+	// }
+	// std::cout << "}" << '\n';
 
 	if (found) {
 		std::cout << "Found at index: " << mid << '\n';
 		std::cout << "Number of comparisons: " << comp << '\n';
 	} else {
 		std::cout << "Not found" << '\n';
+	}
+}
+
+void runSearch(std::vector<int> v, int value) {
+	// Binary Search
+	int low = v.at(0);
+	int high = v.at(v.size()-1);
+	int mid = 0;
+	bool found = false;
+	int comp = 0;
+
+	while (low <= high && !found) {
+		comp++;
+		mid = (low + high) / 2;
+		if (v[mid] > value){
+			high = mid - 1;
+			comp++;
+		} else if (v[mid] < value) {
+			low = mid + 1;
+			comp += 2;
+		}
+		else {
+			found = true;
+			comp += 2;
+		}
+	}
+
+	results(value, mid, comp, found, v);
+}
+
+void checkSort(std::vector<int> v) {
+	// Confrim that vector is sorted
+	bool assend = true;
+	bool dessend = true;
+
+	for (int i = 1; i < v.size(); i++)
+	{
+		if (v.at(i-1) > v.at(i))
+			assend = false;
+
+		if (v.at(i-1) < v.at(i))
+			dessend = false;
+
+		if (!assend && !dessend)
+			throw std::runtime_error("Numbers are not sorted");
 	}
 }
