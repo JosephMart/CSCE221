@@ -7,6 +7,7 @@
 // https://www.youtube.com/watch?v=keEcyZfrmxY
 
 void readFile(std::vector<int>* v, std::string fileName);
+void results(int value, int mid, int comp, bool found, std::vector<int> v);
 
 int main(int argc, char const *argv[]) {
 	try{
@@ -27,15 +28,14 @@ int main(int argc, char const *argv[]) {
 		// Confrim that vector is sorted
 		for (int i = 1; i < v.size(); i++)
 		{
-			if (v.at(i-1) > v.at(i)) {
+			if (v.at(i-1) > v.at(i))
 				assend = false;
-			}
-			if (v.at(i-1) < v.at(i)) {
+
+			if (v.at(i-1) < v.at(i))
 				dessend = false;
-			}
-			if (!assend && !dessend) {
+
+			if (!assend && !dessend)
 				throw std::runtime_error("Numbers are not sorted");
-			}
 		}
 
 		// Ask user what value to search for
@@ -59,15 +59,7 @@ int main(int argc, char const *argv[]) {
 			}
 		}
 
-		// Output resultant info
-		std::cout << "\nSearching for: " << value << '\n';
-		// std::cout << "in \{" << '\n';
-		if (found) {
-			std::cout << "Found at index: " << mid << '\n';
-			std::cout << "Number of comparisons: " << comp << '\n';
-		} else {
-			std::cout << "Not found" << '\n';
-		}
+		results(value, mid, comp, found, v);
 
 		return 0;
 	}
@@ -89,5 +81,26 @@ void readFile(std::vector<int>* v, std::string fileName) {
 	}
 	else {
 		throw std::runtime_error("Unable to open file");
+	}
+}
+
+void results(int value, int mid, int comp, bool found, std::vector<int> v) {
+	// Output resultant info
+	std::cout << "\nSearching for: " << value << '\n';
+	std::cout << "in { ";
+	for (int i = 0; i < v.size(); i++) {
+		std::cout << v.at(i);
+		if (i != v.size() - 1) {
+			std::cout << ",";
+		}
+		std::cout << " ";
+	}
+	std::cout << "}" << '\n';
+
+	if (found) {
+		std::cout << "Found at index: " << mid << '\n';
+		std::cout << "Number of comparisons: " << comp << '\n';
+	} else {
+		std::cout << "Not found" << '\n';
 	}
 }
