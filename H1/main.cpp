@@ -3,6 +3,10 @@
 #include <fstream>
 #include <stdexcept>
 #include <math.h>
+#include <iomanip>
+#include <string>
+
+#define TAB 20
 
 // Sources
 // https://www.youtube.com/watch?v=keEcyZfrmxY
@@ -12,18 +16,25 @@ void Binary_search_up(std::vector<int> v, int value);
 void Binary_search_down(std::vector<int> v, int value);
 void results(int value, int mid, int comp, bool found, std::vector<int> v);
 void checkSort(std::vector<int> v);
+template<typename T> void printD(T t, const int& width)
+{
+    std::cout << std::left << std::setw(width) << std::setfill(' ') << t;
+}
 
 int main(int argc, char const *argv[]) {
 	try{
-
 		std::vector<int> v;
+		int value = 0;
 
-		int value = 10;
-
+		// Inc Even
 		readFile(&v, "up.txt");
 		checkSort(v);
+		std::cout << "Running comparisions for increasing 2^n values " << '\n';
+		printD("Range",TAB);
+		printD("Target",TAB);
+		printD("Comps.",TAB);
+		std::cout << '\n';
 
-		std::cout << "Running comparisions for inc values" << '\n';
 		for (int i = 0; i < 12; i++) {
 			std::vector<int> temp;
 			int value = pow(2,i);
@@ -35,10 +46,15 @@ int main(int argc, char const *argv[]) {
 			temp.clear();
 		}
 
+		// Dec Even
 		v.clear();
 		readFile(&v, "down.txt");
 		checkSort(v);
-		std::cout << "\n\nRunning comparisions for dec values" << '\n';
+		std::cout << "\n\nRunning comparisions for decreasing 2^n values" << '\n';
+		printD("Range",TAB);
+		printD("Target",TAB);
+		printD("Comps.",TAB);
+		std::cout << '\n';
 
 		for (int i = 0; i < 12; i++) {
 			std::vector<int> temp;
@@ -52,10 +68,53 @@ int main(int argc, char const *argv[]) {
 			temp.clear();
 		}
 
+		// Inc Odd
+		v.clear();
+		readFile(&v, "up.txt");
+		checkSort(v);
+		std::cout << "\n\nRunning comparisions for increasing 2^n - 1 values " << '\n';
+		printD("Range",TAB);
+		printD("Target",TAB);
+		printD("Comps.",TAB);
+		std::cout << '\n';
+
+		for (int i = 1; i < 12; i++) {
+			std::vector<int> temp;
+			int value = pow(2,i) - 1;
+
+			for (int j = 0; j < value; j++) {
+				temp.push_back(v.at(j));
+			}
+			Binary_search_up(temp, value);
+			temp.clear();
+		}
+
+		// Dec Odd
+		v.clear();
+		readFile(&v, "down.txt");
+		checkSort(v);
+		std::cout << "\n\nRunning comparisions for decreasing 2^n values" << '\n';
+		printD("Range",TAB);
+		printD("Target",TAB);
+		printD("Comps.",TAB);
+		std::cout << '\n';
+
+		for (int i = 1; i < 12; i++) {
+			std::vector<int> temp;
+			int value = pow(2,i) - 1;
+
+			for (int i = v.size() - value; i < v.size(); i++) {
+				temp.push_back(v.at(i));
+			}
+
+			Binary_search_down(temp, 1);
+			temp.clear();
+		}
+
 		return 0;
 	}
 	catch(std::runtime_error& e) {
-		std::cerr << "ERROR: " << e.what() << std::endl;
+		std::cerr << "ERROR: " << e.what() << 'n';
 		return -1;
 	}
 }
@@ -103,6 +162,7 @@ void Binary_search_up(std::vector<int> v, int value) {
 	int mid = 0;
 	bool found = false;
 	int comp = 0;
+	std::string range = "[1, ";
 
 	while (low <= high && !found) {
 		mid = (low + high) / 2;
@@ -118,7 +178,13 @@ void Binary_search_up(std::vector<int> v, int value) {
 			comp += 2;
 		}
 	}
-	results(value, mid, comp, found, v);
+	// results(value, mid, comp, found, v);
+
+	printD(range.append(std::to_string(value)).append("]"),TAB);
+	printD(value,TAB);
+	printD(comp,TAB);
+	std::cout << '\n';
+
 }
 
 void Binary_search_down(std::vector<int> v, int value) {
@@ -128,6 +194,7 @@ void Binary_search_down(std::vector<int> v, int value) {
 	int mid = 0;
 	bool found = false;
 	int comp = 0;
+	std::string range = "[1, ";
 
 	while (low <= high && !found) {
 		mid = (low + high) / 2;
@@ -144,7 +211,10 @@ void Binary_search_down(std::vector<int> v, int value) {
 		}
 	}
 
-	results(value, mid, comp, found, v);
+	printD(range.append(std::to_string(v.size())).append("]"),TAB);
+	printD(value,TAB);
+	printD(comp,TAB);
+	std::cout << '\n';
 }
 
 void checkSort(std::vector<int> v) {
