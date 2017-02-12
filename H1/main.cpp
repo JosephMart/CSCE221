@@ -8,7 +8,8 @@
 // https://www.youtube.com/watch?v=keEcyZfrmxY
 
 void readFile(std::vector<int>* v, std::string fileName);
-void runSearch(std::vector<int> v, int value);
+void Binary_search_up(std::vector<int> v, int value);
+void Binary_search_down(std::vector<int> v, int value);
 void results(int value, int mid, int comp, bool found, std::vector<int> v);
 void checkSort(std::vector<int> v);
 
@@ -30,7 +31,7 @@ int main(int argc, char const *argv[]) {
 			for (int j = 0; j < value; j++) {
 				temp.push_back(v.at(j));
 			}
-			runSearch(temp, value);
+			Binary_search_up(temp, value);
 			temp.clear();
 		}
 
@@ -43,10 +44,11 @@ int main(int argc, char const *argv[]) {
 			std::vector<int> temp;
 			int value = pow(2,i);
 
-			for (int i = 0; i < value; i++) {
+			for (int i = v.size() - value; i < v.size(); i++) {
 				temp.push_back(v.at(i));
 			}
-			runSearch(temp, value);
+
+			Binary_search_down(temp, 1);
 			temp.clear();
 		}
 
@@ -94,27 +96,51 @@ void results(int value, int mid, int comp, bool found, std::vector<int> v) {
 	}
 }
 
-void runSearch(std::vector<int> v, int value) {
+void Binary_search_up(std::vector<int> v, int value) {
 	// Binary Search
-	int low = v.at(0);
-	int high = v.at(v.size()-1);
+	int low = 0;
+	int high = v.size()-1;
 	int mid = 0;
 	bool found = false;
 	int comp = 0;
 
 	while (low <= high && !found) {
-		comp++;
 		mid = (low + high) / 2;
-		if (v[mid] > value){
-			high = mid - 1;
+		if (v[mid] == value){
+			found = true;
 			comp++;
 		} else if (v[mid] < value) {
 			low = mid + 1;
 			comp += 2;
 		}
 		else {
-			found = true;
+			high = mid - 1;
 			comp += 2;
+		}
+	}
+	results(value, mid, comp, found, v);
+}
+
+void Binary_search_down(std::vector<int> v, int value) {
+	// Binary Search
+	int low = 0;
+	int high = v.size()-1;
+	int mid = 0;
+	bool found = false;
+	int comp = 0;
+
+	while (low <= high && !found) {
+		mid = (low + high) / 2;
+		if (v[mid] == value){
+			found = true;
+			comp++;
+		} else if (v[mid] > value) {
+			low = mid + 1;
+			comp += 2;
+		}
+		else {
+			high = mid - 1;
+			comp+=2;
 		}
 	}
 
