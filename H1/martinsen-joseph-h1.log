@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.17)  12 FEB 2017 01:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.17)  12 FEB 2017 02:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -424,6 +424,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--188
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
 [3 <./inceven.png (PNG copy)>] [4]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 244.
 
@@ -485,7 +490,7 @@ usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf
 -dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/
 ucrb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on martinsen-joseph-h1.pdf (6 pages, 186049 bytes).
+Output written on martinsen-joseph-h1.pdf (6 pages, 186047 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream
