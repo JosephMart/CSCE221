@@ -7,6 +7,12 @@
 \textclass article
 \begin_preamble
 \usepackage{babel}
+\usepackage{babel}
+
+
+
+
+
 
 \end_preamble
 \use_default_options false
@@ -309,10 +315,6 @@ joseph@martinsen.com
  
 \end_layout
 
-\begin_layout Standard
- 
-\end_layout
-
 \begin_layout Quotation
 Please list all sources in the table below including web pages which you used to solve or implement the current homework. If you fail to cite sources you can get a lower number of points or even zero. According to the University Regulations, Section 42, scholastic dishonesty are including: acquiring answers from any unauthorized source, working with another person when not specifically permitted, observing the work of other students during any exam, providing answers when not specifically authorized to do so, informing any person of the contents of an exam prior to the exam, and failing to credit sources used. Disciplinary actions range from grade penalties to expulsion read more: 
 \begin_inset CommandInset href
@@ -330,7 +332,7 @@ target "http://aggiehonor.tamu.edu/"
 \begin_inset VSpace medskip
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -963,17 +965,13 @@ Other Sources
  
 \end_layout
 
-\begin_layout Standard
- 
-\end_layout
-
 \begin_layout Quotation
 I certify that I have listed all the sources that I used to develop the solutions/codes to the submitted work.
 \end_layout
 
 \begin_layout Quotation
 
-\begin_inset Quotes grd
+\begin_inset Quotes eld
 \end_inset
 
 On my honor as an Aggie, I have neither given nor received any unauthorized help on this academic work.” 
@@ -1291,7 +1289,7 @@ Type the solutions to the homework problems listed below using preferably \Speci
 
 \begin_deeper
 \begin_layout Enumerate
-(5 points) To ensure the correctness of the algorithm the input data should be sorted in ascending or descending order. An exception should be thrown when an input vector is unsorted.
+(5 points) To ensure the correctness of the algorithm the input data should be sorted in ascending or descending order. An exception should be thrown when an input vector is unsorted. 
 \end_layout
 
 \begin_layout Enumerate
@@ -1316,10 +1314,6 @@ Type the solutions to the homework problems listed below using preferably \Speci
 
 \begin_deeper
 \begin_layout Standard
-
-\series bold
-
-\series default
 
 \begin_inset Tabular 
 <lyxtabular version="3" rows="13" columns="6">
@@ -2074,7 +2068,7 @@ Result of the formula in item 5
 \begin_inset Newpage newpage
 \end_inset
 
-
+ 
 \end_layout
 
 \end_deeper
@@ -2101,7 +2095,28 @@ status open
 
 
 \begin_layout Standard
-\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
 
 \begin_inset Graphics 
 	filename inceven.png
@@ -2153,12 +2168,12 @@ name "fig:1"
 \begin_layout Standard
 The equation for the best fit line of the graph is 
 \begin_inset Formula \begin{equation}
-  f(x) = 2.88539 \ln(x) + 1
+f(x)=2.88539\ln(x)+1
 \end{equation}
 \end_inset
 
 The result is of plugging in the values to this equation is located in the first table. The numbers are going to be nearly identical to the number of comparisons due to the mean 
-\begin_inset Formula $R^2$
+\begin_inset Formula $R^{2}$
 \end_inset
 
  value being 1
@@ -2184,12 +2199,8 @@ The result is of plugging in the values to this equation is located in the first
 \begin_deeper
 \begin_layout Standard
 
-\series bold
-
-\series default
-
 \begin_inset Tabular 
-<lyxtabular version="3" rows="8" columns="6">
+<lyxtabular version="3" rows="12" columns="6">
 <features rotate="0" tabularvalignment="middle" tabularwidth="0pt">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2297,10 +2308,18 @@ Result of the formula in item 5
 <cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+\begin_layout Standard
+1 
+\end_layout
+
 \end_inset
 </cell>
-<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Standard
+1 
+\end_layout
 
 \end_inset
 </cell>
@@ -2345,10 +2364,18 @@ Result of the formula in item 5
 <cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+\begin_layout Standard
+3 
+\end_layout
+
 \end_inset
 </cell>
-<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Standard
+3 
+\end_layout
 
 \end_inset
 </cell>
@@ -2393,10 +2420,18 @@ Result of the formula in item 5
 <cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+\begin_layout Standard
+5 
+\end_layout
+
 \end_inset
 </cell>
-<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Standard
+5 
+\end_layout
 
 \end_inset
 </cell>
@@ -2441,10 +2476,18 @@ Result of the formula in item 5
 <cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+\begin_layout Standard
+7 
+\end_layout
+
 \end_inset
 </cell>
-<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Standard
+7 
+\end_layout
 
 \end_inset
 </cell>
@@ -2489,10 +2532,18 @@ Result of the formula in item 5
 <cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+\begin_layout Standard
+9 
+\end_layout
+
 \end_inset
 </cell>
-<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Standard
+9 
+\end_layout
 
 \end_inset
 </cell>
@@ -2502,7 +2553,7 @@ Result of the formula in item 5
 \begin_inset Text
 
 \begin_layout Standard
-... 
+[1, 63] 
 \end_layout
 
 \end_inset
@@ -2510,25 +2561,269 @@ Result of the formula in item 5
 <cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
+\begin_layout Standard
+63 
+\end_layout
 
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+\begin_layout Standard
+11 
+\end_layout
+
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+\begin_layout Standard
+1 
+\end_layout
+
 \end_inset
 </cell>
-<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Standard
+11 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+11
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+[1,127] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+127 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+13 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+13 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+13
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+[1,255] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+255 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+15 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+15 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+[1,511] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+511 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+17 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+17 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+17
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+[1,1023] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+2023 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+19 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+19 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+19
+\end_layout
 
 \end_inset
 </cell>
@@ -2555,6 +2850,10 @@ Result of the formula in item 5
 <cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+\begin_layout Standard
+21 
+\end_layout
+
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
@@ -2569,10 +2868,18 @@ Result of the formula in item 5
 <cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
+\begin_layout Standard
+21 
+\end_layout
+
 \end_inset
 </cell>
-<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Standard
+21
+\end_layout
 
 \end_inset
 </cell>
@@ -2587,30 +2894,43 @@ Result of the formula in item 5
 \end_deeper
 \begin_layout Enumerate
 (5 points) Use Big-O asymptotic notation to classify this algorithm and justify your answer. 
-\end_layout
-
-\begin_layout Enumerate
-Submit to CSNet an electronic copy of your code and results of all your experiments for grading.
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_deeper
-\begin_layout Standard
-
-\begin_inset Newpage newpage
+\begin_inset Newline newline
 \end_inset
 
  
+\begin_inset Formula \begin{align*}
+  f(x) = 2.88539 \ln(x) + 1 &\leq 3 \ln(x) + \ln(x) \\
+  &\leq 4\ln(x)
+\end{align*}
+\end_inset
+
+The Big-O asymptotic classification of this algorithm is 
+\begin_inset Formula $O(\ln(x))$
+\end_inset
+
+ with 
+\begin_inset Formula $C=4$
+\end_inset
+
+ and 
+\begin_inset Formula $k > 1$
+\end_inset
+
+ as witnesses
+\end_layout
+
+\begin_layout Enumerate
+Submit to CSNet an electronic copy of your code and results of all your experiments for grading. 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Standard
+
+\begin_inset VSpace 45pt
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2641,21 +2961,21 @@ log
 
 . 
 \begin_inset Formula \begin{align*}
-  A = 8n \log(n) &\quad B = 2n^2 \\
-  8n\log(n) &= 2n^2 \\
-  4\log(n) &= n \\
-  4 &= \dfrac{n}{\log(n)} \\
-  4 &= \dfrac{16}{\log_2(16)} \\
-  4 &= \dfrac{16}{4} \\
-  4 &= 4
+A=8n\log(n) & \quad B=2n^{2}\\
+8n\log(n) & =2n^{2}\\
+4\log(n) & =n\\
+4 & =\dfrac{n}{\log(n)}\\
+4 & =\dfrac{16}{\log_{2}(16)}\\
+4 & =\dfrac{16}{4}\\
+4 & =4
 \end{align*}
 \end_inset
 
 The two lines intersect at 16. As n grows, B grows bigger than A. A is better than B for 
-\begin_inset Formula $n \geq 17$
+\begin_inset Formula $n\geq17$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -2725,15 +3045,15 @@ The worse running time of
 find2D
 \family default
  is 
-\begin_inset Formula $O(n^2)$
+\begin_inset Formula $O(n^{2})$
 \end_inset
 
  because it iterates from 
-\begin_inset Formula $i = 0$
+\begin_inset Formula $i=0$
 \end_inset
 
  to 
-\begin_inset Formula $i = n-1$
+\begin_inset Formula $i=n-1$
 \end_inset
 
  for a total of 
@@ -2777,7 +3097,7 @@ arrayFind
 \end_inset
 
  resulting in 
-\begin_inset Formula $n \cdot n = O(n^2)$
+\begin_inset Formula $n\cdot n=O(n^{2})$
 \end_inset
 
  
@@ -2871,11 +3191,11 @@ log
 \begin_deeper
 \begin_layout Standard
 Let 
-\begin_inset Formula $A = n\log(n)$
+\begin_inset Formula $A=n\log(n)$
 \end_inset
 
  and 
-\begin_inset Formula $B = n^2$
+\begin_inset Formula $B=n^{2}$
 \end_inset
 
  
@@ -2883,18 +3203,18 @@ Let
 \end_inset
 
  
-\begin_inset Formula $A' = \log(n) +1$
+\begin_inset Formula $A'=\log(n)+1$
 \end_inset
 
  and 
-\begin_inset Formula $B' = 2n$
+\begin_inset Formula $B'=2n$
 \end_inset
 
  
 \begin_inset Newline newline
 \end_inset
 
- It is apparent from these derivatives that B will continue to increase at a faster rate than A at a certain point. Thanks to Al and Bob, they found that A and B intersect and 100 with B increasing more and more will A's rate of change begins to slowly decrease.
+ It is apparent from these derivatives that B will continue to increase at a faster rate than A at a certain point. Thanks to Al and Bob, they found that A and B intersect and 100 with B increasing more and more will A's rate of change begins to slowly decrease. 
 \end_layout
 
 \end_deeper
@@ -2984,7 +3304,7 @@ return
 \begin_inset Formula $s$
 \end_inset
 
-
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -2997,7 +3317,7 @@ This algorithm is
 \end_inset
 
 . The running time function is 
-\begin_inset Formula $2n - 1$
+\begin_inset Formula $2n-1$
 \end_inset
 
  
@@ -3088,7 +3408,7 @@ return
 \begin_inset Formula $s$
 \end_inset
 
- 
+  
 \begin_inset Newline newline
 \end_inset
 
@@ -3098,9 +3418,9 @@ return
 \begin_layout LyX-Code
 
 \begin_inset Formula \begin{align*}
-  1 + \dfrac{n}{2}\cdot 2\\
-  1 + n + 1 \\
-  n + 1
+1+\dfrac{n}{2}\cdot2\\
+1+n+1\\
+n+1
 \end{align*}
 \end_inset
 
@@ -3228,7 +3548,7 @@ return
 \begin_inset Formula $s$
 \end_inset
 
-
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -3237,11 +3557,11 @@ return
 
 \begin_layout LyX-Code
 The running time is 
-\begin_inset Formula $n^2+3n+1$
+\begin_inset Formula $n^{2}+3n+1$
 \end_inset
 
  which is 
-\begin_inset Formula $O(n^2)$
+\begin_inset Formula $O(n^{2})$
 \end_inset
 
 
@@ -3348,11 +3668,11 @@ return
 \begin_inset Formula $t$
 \end_inset
 
-
+ 
 \begin_inset Newline newline
 \end_inset
 
- The run time is 
+  The run time is 
 \begin_inset Formula $4n-2$
 \end_inset
 

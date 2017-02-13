@@ -219,14 +219,18 @@ using input in ranges from $1$ to $2^{k}-1,\,\,k=1,2,3,\dots,11.$
 \hline 
 \end{tabular}
 \item (5 points) Use Big-O asymptotic notation to classify this algorithm and justify your answer. \\
+\begin{align*}
+  f(x) = 2.88539 \ln(x) + 1 &\leq 3 \ln(x) + \ln(x) \\
+  &\leq 4\ln(x)
+\end{align*}
+The Big-O asymptotic classification of this algorithm is $O(\ln(x))$ with $C=4$ and $k > 1$ as witnesses 
 
 \item Submit to CSNet an electronic copy of your code and results of all
 your experiments for grading.
-
-\medskip{}
-
 \end{enumerate}
-\newpage{} 
+
+\vspace{45pt}
+
 \item (10 points) \textbf{(R-4.7 p. 185)} The number of operations executed
 by algorithms A and B is $8n$log$n$ and $2n^{2}$, respectively.
 Determine $n_{0}$ such that A is better than B for $n\geq n_{0}$.

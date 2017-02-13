@@ -23,9 +23,16 @@ int main(int argc, char const *argv[]) {
 	try{
 		std::vector<int> v;
 		int value = 0;
+        std::string upFile = "";
+        std::string downFile = "";
+
+        std::cout << "Enter file name with ext. with increacing numbers" << '\n';
+        std::cin >> upFile;
+        std::cout << "\n\nEnter file name with ext. with decreasing numbers" << '\n';
+        std::cin >> downFile;
 
 		// Inc Even
-		readFile(&v, "up.txt");
+		readFile(&v, upFile);
 		checkSort(v);
 		std::cout << "Running comparisions for increasing 2^n values " << '\n';
 		printD("Range",TAB);
@@ -46,7 +53,7 @@ int main(int argc, char const *argv[]) {
 
 		// Dec Even
 		v.clear();
-		readFile(&v, "down.txt");
+		readFile(&v, downFile);
 		checkSort(v);
 		std::cout << "\n\nRunning comparisions for decreasing 2^n values" << '\n';
 		printD("Range",TAB);
