@@ -74,6 +74,7 @@ DoublyLinkedList<T>::DoublyLinkedList(const DoublyLinkedList<T>& dll)
 	// Copy from dll
 	// Complete this function
 	while (temp->getNext()) {
+		// O(n)
 		this->insertLast(temp->getElem());
 		temp = temp->getNext();
 	}
@@ -93,6 +94,7 @@ DoublyLinkedList<T>& DoublyLinkedList<T>::operator=(const DoublyLinkedList<T>& d
 
 		// Allocate new memory & Copy data from source
 		while (temp->getNext()) {
+			// O(n)
 			this->insertLast(temp->getElem());
 			temp = temp->getNext();
 		}
@@ -104,6 +106,7 @@ DoublyLinkedList<T>& DoublyLinkedList<T>::operator=(const DoublyLinkedList<T>& d
 template <typename T>
 void DoublyLinkedList<T>::insertFirst(T newobj)
 {
+	// O(1)
 	DListNode<T> *newNode = new DListNode<T>(newobj, &header, header.next);
 	DListNode<T>* ptr = header.next;
 	// Complete this function
@@ -116,6 +119,7 @@ void DoublyLinkedList<T>::insertFirst(T newobj)
 template <typename T>
 void DoublyLinkedList<T>::insertLast(T newobj)
 {
+	// O(1)
 	DListNode<T> *newNode = new DListNode<T>(newobj, trailer.prev,&trailer);
 	trailer.prev->next = newNode;
 	trailer.prev = newNode;
@@ -125,6 +129,7 @@ void DoublyLinkedList<T>::insertLast(T newobj)
 template <typename T>
 T DoublyLinkedList<T>::removeFirst()
 {
+	// O(1)
 	if (isEmpty())
 		throw EmptyDLinkedListException("Empty Doubly Linked List");
 	// Complete this function
@@ -140,6 +145,7 @@ T DoublyLinkedList<T>::removeFirst()
 template <typename T>
 T DoublyLinkedList<T>::removeLast()
 {
+	// O(1)
 	if (isEmpty())
 		throw EmptyDLinkedListException("Empty Doubly Linked List");
 	DListNode<T> *node = trailer.prev;
@@ -154,6 +160,7 @@ T DoublyLinkedList<T>::removeLast()
 template <typename T>
 DoublyLinkedList<T>::~DoublyLinkedList<T>()
 {
+	// O(n)
 	DListNode<T> *prev_node, *node = header.next;
 	while (node != &trailer)
 	{
@@ -169,6 +176,7 @@ DoublyLinkedList<T>::~DoublyLinkedList<T>()
 template <typename T>
 T DoublyLinkedList<T>::first() const
 {
+	// O(1)
 	if (isEmpty())
 		throw EmptyDLinkedListException("Empty Doubly Linked List");
 	// Complete this function
@@ -179,6 +187,7 @@ T DoublyLinkedList<T>::first() const
 template <typename T>
 T DoublyLinkedList<T>::last() const
 {
+	// O(1)
 	if (isEmpty())
 		throw EmptyDLinkedListException("Empty Doubly Linked List");
 
@@ -194,6 +203,7 @@ ostream& operator<<(ostream& out, const DoublyLinkedList<T>& dll)
 	DListNode<T>* temp = dll.getFirst();
 
 	while (temp->getNext()) {
+		// O(n)
 		out << temp->getElem() << " ";
 		temp = temp->getNext();
 	}

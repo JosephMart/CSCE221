@@ -15,6 +15,7 @@ DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList& dll)
 	// Copy from dll
 	// Complete this function
 	while (temp->getNext()) {
+		// O(n)
 		this->insertLast(temp->getElem());
 		temp = temp->getNext();
 	}
@@ -33,6 +34,7 @@ DoublyLinkedList& DoublyLinkedList::operator=(const DoublyLinkedList& dll)
 
 		// Allocate new memory & Copy data from source
 		while (temp->getNext()) {
+			// O(n)
 			this->insertLast(temp->getElem());
 			temp = temp->getNext();
 		}
@@ -43,6 +45,7 @@ DoublyLinkedList& DoublyLinkedList::operator=(const DoublyLinkedList& dll)
 // insert the object to the first of the linked list
 void DoublyLinkedList::insertFirst(int newobj)
 {
+	// O(1)
 	DListNode *newNode = new DListNode(newobj, &header, header.next);
 	DListNode* ptr = header.next;
 	// Complete this function
@@ -54,6 +57,7 @@ void DoublyLinkedList::insertFirst(int newobj)
 // insert the object to the last of the linked list
 void DoublyLinkedList::insertLast(int newobj)
 {
+	// O(1)
 	DListNode *newNode = new DListNode(newobj, trailer.prev,&trailer);
 	trailer.prev->next = newNode;
 	trailer.prev = newNode;
@@ -62,6 +66,7 @@ void DoublyLinkedList::insertLast(int newobj)
 // remove the first object of the list
 int DoublyLinkedList::removeFirst()
 {
+	// O(1)
 	if (isEmpty())
 		throw EmptyDLinkedListException("Empty Doubly Linked List");
 	// Complete this function
@@ -76,6 +81,7 @@ int DoublyLinkedList::removeFirst()
 // remove the last object of the list
 int DoublyLinkedList::removeLast()
 {
+	// O(1)
 	if (isEmpty())
 		throw EmptyDLinkedListException("Empty Doubly Linked List");
 	DListNode *node = trailer.prev;
@@ -89,6 +95,7 @@ int DoublyLinkedList::removeLast()
 // destructor
 DoublyLinkedList::~DoublyLinkedList()
 {
+	// O(n)
 	DListNode *prev_node, *node = header.next;
 	while (node != &trailer)
 	{
@@ -103,6 +110,7 @@ DoublyLinkedList::~DoublyLinkedList()
 // return the first object
 int DoublyLinkedList::first() const
 {
+	// O(1)
 	if (isEmpty())
 		throw EmptyDLinkedListException("Empty Doubly Linked List");
 	// Complete this function
@@ -112,6 +120,7 @@ int DoublyLinkedList::first() const
 // return the last object
 int DoublyLinkedList::last() const
 {
+	// O(1)
 	if (isEmpty())
 		throw EmptyDLinkedListException("Empty Doubly Linked List");
 
@@ -122,6 +131,7 @@ int DoublyLinkedList::last() const
 // output operator
 ostream& operator<<(ostream& out, const DoublyLinkedList& dll)
 {
+	// O(n)
 	// Complete this function
 	DListNode* temp = dll.getFirst();
 
