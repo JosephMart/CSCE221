@@ -4,11 +4,6 @@
 #include <stdexcept>
 
 
-// extend range_error from <stdexcept>
-struct EmptyDLinkedListException : std::range_error {
-	explicit EmptyDLinkedListException(char const* msg=NULL): range_error(msg) {}
-};
-
 // copy constructor
 DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList& dll)
 {

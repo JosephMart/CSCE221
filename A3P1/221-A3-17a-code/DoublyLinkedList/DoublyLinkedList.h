@@ -2,6 +2,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
 
@@ -49,3 +50,8 @@ public:
 };
 // output operator
 ostream& operator<<(ostream& out, const DoublyLinkedList& dll);
+
+// extend range_error from <stdexcept>
+struct EmptyDLinkedListException : std::range_error {
+	explicit EmptyDLinkedListException(char const* msg=NULL): range_error(msg) {}
+};
