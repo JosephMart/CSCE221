@@ -1,0 +1,391 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\newcommand{\AAS}{\textbf{Assignment}}
+\newcommand{\vdist}{\vspace*{10em}}
+\newcommand{\dist}{\hspace{2em}}
+\newcommand{\ddist}{\hspace{4em}}
+\newcommand{\dddist}{\hspace{6em}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0in
+\headsep 0in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size large
+Assignment
+\begin_inset space ~
+\end_inset
+
+3 – Part 2 & 3
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\emph on
+Part 2 and 3 due March 19 at midnight
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\emph on
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align block
+We use the same instructions for grading as for previous assignments.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\series bold
+Problem.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+Write a C++ program for a simple calculator based on expression postfix
+ form.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Part 2: implement templated stack and queue data structures using the templated
+ linked list class.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Part 3:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+implement the class 
+\family typewriter
+parser 
+\family default
+with a function 
+\family typewriter
+to_postfix()
+\family default
+ to translate input infix form of an algebraic expression into its postfix
+ form using stack and queue as the auxiliary data structures, see lecture
+ notes for the algorithm.
+\end_layout
+
+\begin_layout Enumerate
+implement the class 
+\family typewriter
+evaluator
+\family default
+ with a function 
+\family typewriter
+evaluate()
+\family default
+ to get the value of an algebraic expression based on its postfix form.
+ Notice that during the evaluation process of an expression the stack data
+ structure should be used.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+translating a postfix expression into an infix expression (optional for
+ extra credit)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Useful hints.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Use the templated linked list class from Part 1 of the assignment to implement
+ the templated versions of the queue and stack data structures.
+ Test the correctness of the queue using string type and floating point
+ type (type 
+\family typewriter
+double
+\family default
+).
+ 
+\end_layout
+
+\begin_layout Itemize
+The infix expression will consist of a valid combination of the following
+ operators: 
+\begin_inset Formula $(,),+,-,*,/,\mathcircumflex$
+\end_inset
+
+.
+ The operator 
+\begin_inset Formula $\mathcircumflex$
+\end_inset
+
+ stands for the exponential operator (raising to the power).
+\end_layout
+
+\begin_layout Itemize
+Operands include 26 variables, namely, 
+\begin_inset Formula $a$
+\end_inset
+
+ through 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Values for the operands can be entered from the keyboard (interactively).
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+positive and negative numbers.
+ To represent negative sign use tilda ~ (e.g., ~5 for 
+\begin_inset Formula $-5$
+\end_inset
+
+).
+ You can use
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Throw the exception 
+\begin_inset Quotes eld
+\end_inset
+
+
+\family typewriter
+Invalid input
+\family default
+
+\begin_inset Quotes erd
+\end_inset
+
+ in the case when an invalid name of a variable or incorrect operator is
+ used.
+\end_layout
+
+\begin_layout Itemize
+Read the expression from the input token by token until the termination
+ character 
+\family typewriter
+#
+\family default
+ of the expression is found.
+ Then your program should be able to display the infix queue.
+ Write a string tokenizer function to extract tokens from the input string.
+\end_layout
+
+\begin_layout Itemize
+Print out the postfix queue.
+ 
+\end_layout
+
+\begin_layout Itemize
+Evaluate the obtained postfix expression using the algorithm described in
+ class.
+ Replace variables 
+\begin_inset Formula $a,..,z$
+\end_inset
+
+ by associated values.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The basic user menu for this program
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Read an infix expression from the keyboard 
+\end_layout
+
+\begin_layout Enumerate
+Check whether or not parenthesis are balanced correctly
+\end_layout
+
+\begin_layout Enumerate
+Display a correct infix expression on the screen or a message that the expressio
+n is invalid
+\end_layout
+
+\begin_layout Enumerate
+Convert infix form to its postfix form and display a postfix queue on the
+ screen 
+\end_layout
+
+\begin_layout Enumerate
+Evaluate postfix form of the expression for floating point values entered
+ from the keyboard
+\end_layout
+
+\begin_layout Enumerate
+Display the value of an algebraic expression on the screen 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+What to include in the assignment report?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Provide the design of your program for the parts 2 and 3 of the assignment.
+ Write about the relation between classes and justification why you chose
+ them.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Describe each class private and public members, your algorithms and their
+ implementations.
+\end_layout
+
+\begin_layout Enumerate
+Write the names of the templated classes of your assignment.
+ Which types have you used to test them for correctness?
+\end_layout
+
+\begin_layout Enumerate
+Describe all tests done to verify correctness of your program for the parts
+ 2 and 3 of the assignment.
+ Give an explanation why you chose such tests.
+ Include your tests in your assignment report.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Please submit to CSNet a tar file that includes:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The templated version of the linked list, part 1 of the assignment.
+\end_layout
+
+\begin_layout Itemize
+The templated version of the queue and stack classes based on doubly linked
+ list (part 2)
+\end_layout
+
+\begin_layout Itemize
+The parser class (part 3)
+\end_layout
+
+\begin_layout Itemize
+The evaluator class (part 3)
+\end_layout
+
+\begin_layout Itemize
+The testing class with the main function and the menu of this program.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
