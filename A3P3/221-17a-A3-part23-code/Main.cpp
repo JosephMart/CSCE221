@@ -5,7 +5,12 @@
 int main() {
     /* implement user menu */
 
-    Parser test = Parser("Parsadf");
+    Parser test = Parser("5-3");
+
+    Evaluator e = Evaluator(test);
+
+    std::cout << e.getValue() << '\n';
+
 
     return 0;
 }

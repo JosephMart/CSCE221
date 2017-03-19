@@ -2,8 +2,6 @@
 
 /* describe rest of functions */
 LinkedQueue<Token> Parser::toPostfix() {
-    string_2_vec("2*(2+3)");
-
     for (int i = 0; i < tokenList.size(); i++) {
         Token item = tokenList[i];
 
@@ -35,12 +33,12 @@ LinkedQueue<Token> Parser::toPostfix() {
 }
 
 
-void Parser::string_2_vec(std::string s)
+void Parser::string_2_vec()
 {
     Token t;
-    for(int i = 0; i < s.size(); i++)
+    for(int i = 0; i < infix.size(); i++)
     {
-        t = Token(s[i]);
+        t = Token(infix[i]);
         if(t.isVar())
         {
             std::cout << "Enter value for " << t.kind << ": ";

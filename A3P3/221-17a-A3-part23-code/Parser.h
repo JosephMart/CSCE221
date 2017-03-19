@@ -96,7 +96,7 @@ private:
     bool isOperand(char c);
     int operatorWeight(char c);
     void generateVec();
-    void string_2_vec(std::string s);
+    void string_2_vec();
 
 public:
     // constructor
@@ -108,6 +108,7 @@ public:
         OPAR = Token('(', 1);
         CPAR = Token(')', 1);
         opStack.push(Token('#'));
+        string_2_vec();
         toPostfix();
     }
 
