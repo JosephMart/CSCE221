@@ -1,4 +1,10 @@
-// LinkedStack.h
+//============================================================================
+// Name        : LinkedStack.h
+// Author      : Joseph Martinsen
+// Date        : 19 March 2017
+// Copyright   : JMM 2017
+// Description : File for LinkedStack
+//============================================================================
 
 #ifndef LINKEDSTACK_H_
 #define LINKEDSTACK_H_
@@ -17,7 +23,7 @@ class LinkedStack
 {
 private:
     /* declare member variables here */
-    DoublyLinkedList<T> dll;
+    DoublyLinkedList<T> dll; // Doubly Linked List
 
 public:
    // user-defined exceptions
@@ -27,13 +33,13 @@ public:
    };
 
     /* declare rest of functions */
-    LinkedStack<T>() : dll() { }
-    ~LinkedStack<T>() { dll.~DoublyLinkedList(); }
-    bool isEmpty() const { return dll.isEmpty(); }
-    void push(const T elem) { dll.insertFirst(elem); }
-    T pop() throw(StackEmptyException);
-    T top() const throw (StackEmptyException);
-    const DoublyLinkedList<T> getDLL() const;
+    LinkedStack<T>() : dll() { }                       // Constructor
+    ~LinkedStack<T>() { dll.~DoublyLinkedList(); }     // Destructor
+    bool isEmpty() const { return dll.isEmpty(); }     // True if empty
+    void push(const T elem) { dll.insertFirst(elem); } // Push elem to stack
+    T pop() throw(StackEmptyException);                // Pop top of stack
+    T top() const throw (StackEmptyException);         // Get top of stack
+    const DoublyLinkedList<T> getDLL() const;          // Get DoublyLinkedList
 };
 
 /* describe rest of the functions here */
@@ -59,8 +65,7 @@ const DoublyLinkedList<T> LinkedStack<T>::getDLL() const {
 template<typename T>
 std::ostream& operator<<(std::ostream& out, const LinkedStack<T>& stack)
 {
-  /* fill in the function */
-   return out << stack.getDLL();
+    return out << stack.getDLL();
 }
 
 #endif

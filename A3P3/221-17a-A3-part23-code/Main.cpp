@@ -1,59 +1,58 @@
+//============================================================================
+// Name        : Main.cpp
+// Author      : Joseph Martinsen
+// Date        : 19 March 2017
+// Copyright   : JMM 2017
+// Description : Handler Function for the Calulator Program
+//============================================================================
+
 #include "RuntimeException.h"
 #include "Parser.h"
 #include "Evaluator.h"
 
-
+// Used to Check if parenthesis match
 bool check_paren(std::string s);
 
 int main() {
     /* implement user menu */
+    char input;             // Store users choice
+    bool infix = false;     // True if infix eq entered
+    bool evaluated = false; // True if evalutation (5) has occured
+    bool eCont = false;     // True if "Press enter to Continue" needs to be shown
+    string eq;              // Store infix equation
+    Parser par;             // Parser object
+    double value;           // Store result of equation
 
-    // 1. Read an infix expression from the keyboard
-    // 2. Check whether or not parenthesis are balanced correctly
-    // 3. Display a correct infix expression on the screen or a message that the expression is invalid
-    // 4. Convert infix form to its postfix form and display a postfix queue on the screen
-    // 5. Evaluate postfix form of the expression for floating point values entered from the keyboard
-    // 6. Display the value of an algebraic expression on the screen
-    // string eq;
-    // std::cout << "Enter Your Equation in Infix Form" << '\n';
-    // std::cin >> eq;
-    // Evaluator e = Evaluator(test);
-    // std::cout << e.getValue() << '\n';
-
-    char input;
-    bool infix = false;
-    bool evaluated = false;
-    string eq;
-    Parser par;
-    double value;
-
+    // Begin Menu loop
     do
     {
         system("clear");
-        bool eCont = false;
+        eCont = false;
 
-        std::cout << "Choose one of the following options" << '\n';
-        std::cout << "\t1: Read an infix expression from the keyboard" << '\n';
-        std::cout << "\t2: Check if parenthesis are balanced correctly" << '\n';
-        std::cout << "\t3: Display infix Expression" << '\n';
-        std::cout << "\t4: Display postfix Expression" << '\n';
-        std::cout << "\t5: Evaluate" << '\n';
-        std::cout << "\t6: 4 and 5 I guess??" << '\n';
-        std::cout << "Press q to quit\n" << '\n';
-        std::cout << "Choice: ";
-        std::cin >> input;
+        // Print Menu to the User
+        std::cout << "Choose one of the following options" << '\n'
+                  << "\t1: Read an infix expression from the keyboard" << '\n'
+                  << "\t2: Check if parenthesis are balanced correctly" << '\n'
+                  << "\t3: Display infix Expression" << '\n'
+                  << "\t4: Display postfix Expression" << '\n'
+                  << "\t5: Evaluate" << '\n'
+                  << "\t6: 4 and 5 I guess??" << '\n'
+                  << "Press q to quit\n" << '\n'
+                  << "Choice: ";
+        std::cin >> input;  // Get input from the User
+
+        // Determine which option was chosen
         switch(input)
     	{
-            case '1':
+            case '1': // Read an infix expression from the keyboard
             {
                 system("clear");
                 std::cout << "Enter Your Equation in infix form\n" << '\n';
                 std::cin >> eq;
                 infix = true;
-                evaluated = false;
-                break;
+                evaluated = false; break;
             }
-            case '2':
+            case '2': // Check whether or not parenthesis are balanced correctly
             {
                 system("clear");
                 if (infix) {
@@ -63,20 +62,20 @@ int main() {
                     } else
                         std::cout << "not correct." << '\n';
                 }
-                eCont = true;
-                break;
+                eCont = true; break;
             }
-            case '3':
+            case '3': // Display a correct infix expression on the screen or
+                      // a message that the expression is invalid
             {
                 system("clear");
                 if (infix) {
                     std::cout << "Infix Expression: " << '\n';
-                    par.printInfix();
+                    std::cout << eq << '\n';
                 }
-                eCont = true;
-                break;
+                eCont = true; break;
             }
-            case '4':
+            case '4': // Convert infix form to its postfix form and display a
+                      // postfix queue on the screen
             {
                 system("clear");
                 if (infix) {
@@ -84,10 +83,10 @@ int main() {
                     std::cout << "Postfix Expression: " << '\n';
                     par.printPostfix();
                 }
-                eCont = true;
-                break;
+                eCont = true; break;
             }
-            case '5':
+            case '5': // Evaluate postfix form of the expression for floating
+                      // point values entered from the keyboard
             {
                 system("clear");
                 if (infix) {
@@ -96,54 +95,47 @@ int main() {
                     value = e.getValue();
                     evaluated = true;
                 }
-                eCont = true;
-                break;
+                eCont = true; break;
             }
-            case '6':
+            case '6': // Display the value of an algebraic expression on the screen
             {
                 system("clear");
                 if (evaluated)
                     std::cout << value << '\n';
-                else
+                else if (infix)
                     std::cout << "Expression has not been Evaluated" << '\n';
-                eCont = true;
-                break;
+                eCont = true; break;
             }
-            case 'Q':
+            case 'Q': // Quit
             case 'q':
+                infix = true; break;
+            default: // When user be stupid
             {
-                infix = true;
-                break;
-
-            }
-            default:
                 cout << "Invalid Selection. Please try Again." << endl;
+                eCont = true;
+            }
         }
-        if (!infix) {
+        if (!infix)
             std::cout << "Enter an infix expression first.\n" << '\n';
-        }
         if (eCont) {
             std::cout << "Press Enter to Continue..." << '\n';
             system("read");
         }
-    } while(!((input == 'Q')||(input == 'q')));
-
-
+    } while(!((input == 'Q')||(input == 'q'))); // While User does not Quit
     return 0;
 }
 
+// Used to Check if parenthesis match
 bool check_paren(std::string s)
 {
-    int o = 0;
-    int c = 0;
-    for(unsigned int i = 0; i < s.size(); i++)
+    int numOpen = 0;
+    int numClosed = 0;
+    for(int i = 0; i < s.size(); i++)
     {
         if(s[i] == '(')
-            o++;
+            numOpen++;
         if(s[i] == ')')
-            c++;
+            numClosed++;
     }
-    if(o == c)
-        return true;
-    return false;
+    return numOpen == numClosed;
 }

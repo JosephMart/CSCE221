@@ -1,3 +1,11 @@
+//============================================================================
+// Name        : Evaluator.h
+// Author      : Joseph Martinsen
+// Date        : 19 March 2017
+// Copyright   : JMM 2017
+// Description : Header file for Evaluator
+//============================================================================
+
 #ifndef EVALUATOR_H
 #define EVALUATOR_H
 

@@ -1,3 +1,11 @@
+//============================================================================
+// Name        : Parser.h
+// Author      : Joseph Martinsen
+// Date        : 19 March 2017
+// Copyright   : JMM 2017
+// Description : Headler File for Token and Parser
+//============================================================================
+
 #ifndef PARSER_H
 #define PARSER_H
 
@@ -6,12 +14,7 @@
 #include "RuntimeException.h"
 #include <vector>
 
-
-// Possible Tokens are (, ), +, -, *, /, ;, and floating point numbers.
-// Data member kind stores the token itself for all but the numbers.
-// Numbers are represented with kind '#' and the value stored in
-// data member val (other tokens don't use val).
-// ; means output the current value.
+// Token Struct
 struct Token {
     char kind;
     double value;
@@ -21,66 +24,25 @@ struct Token {
     Token(char ch) : kind(ch), value(0), weight(get_operator_weight()) {}
     Token(char ch, int lb) : kind(ch), value(0), weight(lb) {}
 
-    bool isOperator()
-    {
-        return kind == '+' || kind == '-' || kind == '*' || kind == '/' || kind == '^';
-    }
-    bool isOperand()
-    {
-        return isNum() || isVar();
-    }
-    bool isNum()
-    {
-        return kind >= '0' && kind <= '9';
-    }
-    bool isVar()
-    {
-        return kind >= 'a' && kind <= 'z';
-    }
-    void set_value(std::string word)
-    {
-        const char* c_word = word.c_str();
-        value = atof(c_word);
-    }
-    void char_to_double()
-    {
-        value = (double)(kind - 48);
-    }
-    int get_operator_weight()
-    {
-        int weight = 0;
-        switch(kind)
-        {
-            case '(':
-            case ')':
-                weight = 1;
-                break;
-            case '+':
-            case '-':
-                weight = 2;
-                break;
-            case '*':
-            case '/':
-                weight = 3;
-                break;
-            case '^':
-                weight = 4;
-                break;
-        }
-        return weight;
-    }
+    bool isOperator();
+    bool isOperand();
+    bool isNum();
+    bool isVar();
+    void set_value(std::string word);
+    void char_to_double();
+    int get_operator_weight();
 };
 
 
 class Parser {
 private:
     /* declare constants */
-    Token MULT;
-    Token DIV;
-    Token ADD;
-    Token SUB;
-    Token OPAR;
-    Token CPAR;
+    Token MULT; // Multiply
+    Token DIV;  // Division
+    Token ADD;  // Addition
+    Token SUB;  // Subtract
+    Token OPAR; // Open Parenthesis
+    Token CPAR; // Close Parenthesis
 
     /* declare member variables;
     may include a string postfix queue and a integer operator stack */
@@ -96,7 +58,7 @@ private:
     bool isOperand(char c);
     int operatorWeight(char c);
     void generateVec();
-    void string_2_vec();
+    void getVec();
 
 public:
     // constructor
@@ -109,7 +71,7 @@ public:
         OPAR = Token('(', 1);
         CPAR = Token(')', 1);
         opStack.push(Token('#'));
-        string_2_vec();
+        getVec();
         toPostfix();
     }
 

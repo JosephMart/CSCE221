@@ -76,7 +76,6 @@ DoublyLinkedList<T>::DoublyLinkedList(const DoublyLinkedList<T>& dll)
 	DListNode<T>* temp = dll.getFirst();
 
 	// Copy from dll
-	// Complete this function
 	while (temp->getNext()) {
 		// O(n)
 		this->insertLast(temp->getElem());

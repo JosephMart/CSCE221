@@ -1,6 +1,64 @@
+//============================================================================
+// Name        : Parser.cpp
+// Author      : Joseph Martinsen
+// Date        : 19 March 2017
+// Copyright   : JMM 2017
+// Description : Handler Function for Parser and Token
+//============================================================================
+
 #include "Parser.h"
 
-/* describe rest of functions */
+// Member functions for Token
+bool Token::isOperator()
+{
+    return kind == '+' || kind == '-' || kind == '*' || kind == '/' || kind == '^';
+}
+bool Token::isOperand()
+{
+    return isNum() || isVar();
+}
+bool Token::isNum()
+{
+    return kind >= '0' && kind <= '9';
+}
+bool Token::isVar()
+{
+    return kind >= 'a' && kind <= 'z';
+}
+void Token::set_value(std::string word)
+{
+    const char* c_word = word.c_str();
+    value = atof(c_word);
+}
+void Token::char_to_double()
+{
+    value = (double)(kind - 48);
+}
+int Token::get_operator_weight()
+{
+    int weight = 0;
+    switch(kind)
+    {
+        case '(':
+        case ')':
+            weight = 1;
+            break;
+        case '+':
+        case '-':
+            weight = 2;
+            break;
+        case '*':
+        case '/':
+            weight = 3;
+            break;
+        case '^':
+            weight = 4;
+            break;
+    }
+    return weight;
+}
+
+// Member functions for Parser
 LinkedQueue<Token> Parser::toPostfix() {
     for (int i = 0; i < tokenList.size(); i++) {
         Token item = tokenList[i];
@@ -32,7 +90,7 @@ LinkedQueue<Token> Parser::toPostfix() {
 }
 
 
-void Parser::string_2_vec()
+void Parser::getVec()
 {
     Token t;
     for(int i = 0; i < infix.size(); i++)
