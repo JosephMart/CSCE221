@@ -26,6 +26,7 @@ public:
 
    /* declare rest of functions */
     LinkedQueue<T>() : dll() { }
+    LinkedQueue<T>(const LinkedQueue<T>& lq);
     ~LinkedQueue<T>() { dll.~DoublyLinkedList(); }
     T first() const throw(QueueEmptyException);
     bool isEmpty() const throw(QueueEmptyException);
@@ -35,6 +36,12 @@ public:
 };
 
 /* describe rest of the functions here */
+template <typename T>
+LinkedQueue<T>::LinkedQueue(const LinkedQueue<T>& lq)
+{
+    dll = lq.getDLL();
+}
+
 template <typename T>
 T LinkedQueue<T>::first() const throw(QueueEmptyException)
 {
@@ -60,7 +67,14 @@ template<typename T>
 std::ostream& operator<<(std::ostream& out, const LinkedQueue<T>& queue)
 {
   /* fidll in the function */
-   return out << queue.getDLL();
+    DoublyLinkedList<T> dll = queue.getDLL();
+    DListNode<T>* node = dll.getFirst();
+    while(node != dll.getAfterLast()->getPrev())
+    {
+        out << node->getElem().kind;
+        node = node->getNext();
+    }
+    return out;
 }
 
 #endif

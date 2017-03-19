@@ -12,11 +12,11 @@ public:
   class DivisionByZeroException : public RuntimeException {
     public:
       DivisionByZeroException() : RuntimeException("Division by zero") {}
-  };     
+  };
 private:
-  /* declare member variables; 
+  /* declare member variables;
     may include a string postfix queue and a double value stack */
-  
+
   /* declare utility functions */
 
 public:
