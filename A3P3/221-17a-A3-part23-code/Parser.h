@@ -100,6 +100,7 @@ private:
 
 public:
     // constructor
+    Parser() : infix("") {}
     Parser(std::string s) : infix(s) {
         MULT = Token('*', 3);
         DIV  = Token('/', 3);

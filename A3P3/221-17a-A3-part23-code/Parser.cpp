@@ -28,7 +28,6 @@ LinkedQueue<Token> Parser::toPostfix() {
         postfix.enqueue(opStack.pop());
     }
 
-    std::cout << postfix << '\n';
     return postfix;
 }
 
