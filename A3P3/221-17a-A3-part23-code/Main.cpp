@@ -36,7 +36,7 @@ int main() {
                   << "\t3: Display infix Expression" << '\n'
                   << "\t4: Display postfix Expression" << '\n'
                   << "\t5: Evaluate" << '\n'
-                  << "\t6: 4 and 5 I guess??" << '\n'
+                  << "\t6: Evaluate" << '\n'
                   << "Press q to quit\n" << '\n'
                   << "Choice: ";
         std::cin >> input;  // Get input from the User
