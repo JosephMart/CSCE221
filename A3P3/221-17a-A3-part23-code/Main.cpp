@@ -36,7 +36,7 @@ int main() {
                   << "\t3: Display infix Expression" << '\n'
                   << "\t4: Display postfix Expression" << '\n'
                   << "\t5: Evaluate" << '\n'
-                  << "\t6: Evaluate" << '\n'
+                  << "\t6: Display the value of an algebraic expression" << '\n'
                   << "Press q to quit\n" << '\n'
                   << "Choice: ";
         std::cin >> input;  // Get input from the User
@@ -95,6 +95,7 @@ int main() {
                     value = e.getValue();
                     evaluated = true;
                 }
+                std::cout << "Value has been calculated." << '\n';
                 eCont = true; break;
             }
             case '6': // Display the value of an algebraic expression on the screen
@@ -116,7 +117,7 @@ int main() {
             }
         }
         if (!infix)
-            std::cout << "Enter an infix expression first.\n" << '\n';
+            std::cout << "Print the .\n" << '\n';
         if (eCont) {
             std::cout << "Press Enter to Continue..." << '\n';
             system("read");

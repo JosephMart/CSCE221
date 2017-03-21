@@ -41,19 +41,19 @@ int Token::get_operator_weight()
     {
         case '(':
         case ')':
-            weight = 1;
-            break;
+            weight = 1; break;
         case '+':
         case '-':
-            weight = 2;
-            break;
+            weight = 2; break;
         case '*':
         case '/':
-            weight = 3;
-            break;
+            weight = 3; break;
         case '^':
-            weight = 4;
-            break;
+            weight = 4; break;
+        case '~':
+            weight = 5; break;
+        case ';':
+            weight = 6; break;
     }
     return weight;
 }
@@ -64,7 +64,18 @@ LinkedQueue<Token> Parser::toPostfix() {
         Token item = tokenList[i];
 
         if (!(opStack.isEmpty()) && item.isOperand())
-            postfix.enqueue(item);
+        {
+            do {
+                postfix.enqueue(item);
+
+                if (i < tokenList.size())
+                    item = tokenList[++i];
+
+            } while(!(opStack.isEmpty()) && item.isOperand());
+
+            postfix.enqueue(Token(';', 6));
+            i--;
+        }
         else if (!(opStack.isEmpty()) && item.kind == ')') {
             Token topToken = opStack.pop();
             while (topToken.kind != '(') {
