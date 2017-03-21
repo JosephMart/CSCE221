@@ -19,7 +19,7 @@ bool Token::isOperand()
 }
 bool Token::isNum()
 {
-    return kind >= '0' && kind <= '9';
+    return kind >= '0' && kind <= '9' || kind == '~';
 }
 bool Token::isVar()
 {
@@ -52,7 +52,7 @@ int Token::get_operator_weight()
             weight = 4; break;
         case '~':
             weight = 5; break;
-        case ';':
+        case ' ':
             weight = 6; break;
     }
     return weight;
@@ -67,13 +67,14 @@ LinkedQueue<Token> Parser::toPostfix() {
         {
             do {
                 postfix.enqueue(item);
-
                 if (i < tokenList.size())
                     item = tokenList[++i];
-
+                if (i == tokenList.size() + 1) {
+                    break;
+                }
             } while(!(opStack.isEmpty()) && item.isOperand());
 
-            postfix.enqueue(Token(';', 6));
+            postfix.enqueue(Token(' ', 6));
             i--;
         }
         else if (!(opStack.isEmpty()) && item.kind == ')') {

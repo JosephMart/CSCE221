@@ -54,10 +54,7 @@ private:
     /* declare utility functions */
     LinkedStack<std::string> stringToStack(std::string s);
     LinkedQueue<Token> toPostfix();
-    bool isOperator(char c);
-    bool isOperand(char c);
     int operatorWeight(char c);
-    void generateVec();
     void getVec();
 
 public:

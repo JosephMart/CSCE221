@@ -14,6 +14,7 @@
 #include "LinkedStack.h"
 #include "RuntimeException.h"
 #include <cmath>
+#include <sstream>
 
 class Evaluator {
 public:
