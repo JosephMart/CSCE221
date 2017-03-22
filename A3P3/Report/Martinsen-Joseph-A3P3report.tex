@@ -2,6 +2,7 @@
 %% Do not edit unless you really know what you are doing.
 \documentclass[english]{article}
 \usepackage{mathptmx}
+\usepackage{graphicx}
 \usepackage{helvet}
 \usepackage{courier}
 \usepackage[T1]{fontenc}
@@ -60,7 +61,7 @@ problem.
   \item $Parser::toPostfix()$ this functions converts a vector of tokens in infix form to an equivalent postfix form. This functions iterates through each token in the vector. If the token is an operand, enqueue the operand until the next item is not an operand. If the token was an close parenthesis, pop items off the stack and enqueue that item until a left parenthesis is reached. If the token is an open parenthesis, push the item to the stack. if the token is a \#, pop an item of the stack and enqueue it until the stack is empty. Else, pop an item off the stack and enqueue it until the top item of the stack's weight is greater or equal to the tokens weight. Then enqueue the item. Finally, pop items off the stack and enqueue them until the stack is empty. Return the que.
   \item $Token::get\_operator\_weight()$ if kind is ( or ), weight is 1, if kind is $+$ or $-$, weight is 2, if kind is $*$ or $/$, weight is 3, if kind is \^{}, weight is 4, if kind is \~{}, weight is 5. Return weight
   \item $Evaluator::evaluate:$ taken in operator, v1, and v2. If operator is $+$, add v1 and v2. If operator is $-$, subtract v2 from v1. If operator is $*$, multiply v1 and v2. If operator is \^{}, raise v1 to the power of v2. If operator is $/$ and v2 is not 0, divide v1 by v2. If v2 was 0, throw a division by 0 exception.
-  \item $Evaluator::getValue()$
+  \item $Evaluator::getValue(): $ Set sign to be 1. While first item in que is not \#, if first item in que is \~{}, set sign to $-1$ and dequeue the item. If first item in que is a space, deqeue it. If first item inn que is an operand, deque the operand and string stream it into ss until a space is reached. Input the string stream into a double. Multiply the double by the current sign value. Set sign value to 1. Push the number to the stack. If the first item in the que is an operator, evaluate that operator while dequeueing (so many vowels in a row!) it along with the the two next popable items on the stack. Push that evaluated value to the stack. Else, return the last popped value of the stack.
 \end{itemize} \ \\
 
 \item Analyze the algorithms according to assignment requirements. \\ \ \\
@@ -68,7 +69,7 @@ problem.
   \item $Parser::toPostfix(): \; O(n)$
   \item $Token::get\_operator\_weight(): \; O(1)$ 
   \item $Evaluator::evaluate: \; O(1)$
-  \item $Evaluator::getValue()$
+  \item $Evaluator::getValue(): \; O(n)$
 \end{itemize} \ \\
 
 \end{enumerate}
@@ -78,37 +79,20 @@ problem.
 program such as classes used to implement the data structures or exceptions.\\ \ \\
 
 \begin{itemize}
-  \item Parser
-  \item Evaluator
   \item \textbf{Templated Linked Que:} contains a private doubly linked list variable. Functions include a constructor, copy constructor, destructor, return first element in que, check if que is empty, enqueue an item, dequeue an item, and an accessor function for the doubly linked list. An overloaded output stream operator was used to display the all the elements in the que. Finally everything was templated for use with a variety of data types.
     
     \item \textbf{Templated Linked Stack:} contains a private doubly linked list variable. Functions include a constructor, destructor, check if stack is empty, push an element to the stack, pop the top element of the stack, get top of the stack, and an accessor function for the doubly linked list. An overloaded output stream operator was used to display the all the elements in the stack. Finally everything was templated for use with a variety of data types.
-
-  \item RuntimeException
 \end{itemize} \ \\
 
-\item Include in the report the class declarations from a header file (.h)
-and their implementation from a source file (.cpp). \vfill{}
-\item Provide features of the C++ programming paradigms like Inheritance
-or Polymorphism in case of object oriented programming, or Templates
-in the case of generic programming used in your implementation. \\ \ \\
-
-Templated
-\begin{itemize}
-  \item LinkedQue
-  \item LinkedStack
-\end{itemize}
-
-Inheritance
-\begin{itemize}
-  \item RuntimeException
-\end{itemize}\ \\
 \end{enumerate}
 \item A user guide description how to navigate your program with the instructions
 how to: 
 \begin{enumerate}
-\item compile the program: specify the directory and file names, etc.\vfill{}
-\item run the program: specify the name of an executable file. \vfill{}
+\item compile the program: specify the directory and file names, etc.\\ \ \\
+Make sure you are in the directory "~/Martinsen-Joseph-A3P3/Martinsen-Joseph-A3P3code/" \\
+Compile the program with "make"
+\item run the program: specify the name of an executable file. \\ \ \\
+Run the program with "./run-main"
 \pagebreak{}
 \end{enumerate}
 \item Specifications and description of input and output formats and files 
@@ -118,10 +102,13 @@ No input or output files \\ \ \\
 
 \item A file input format: when a program requires a sequence of input items,
 specify the number of items per line or a line termination. Provide
-a sample of a required input format. \vfill{}
+a sample of a required input format. \\ \ \\
+Not applicable
+
 \item Discuss possible cases when your program could crash because of incorrect
 input (a wrong file name, strings instead of a number, or such cases
-when the program expects 10 items to read and it finds only 9.)\vfill{}
+when the program expects 10 items to read and it finds only 9.)\\ \ \\
+Should not fail \\
 \end{enumerate}
 \item Provide types of exceptions and their purpose in your program.
 \begin{enumerate}
@@ -144,7 +131,48 @@ etc.).\\ \ \\
 inputs (e.g., insertion of an item at the beginning, at the end, or
 at a random place into a sorted vector). Include evidence of your
 testing, such as an output file or screen shots with an input and
-the corresponding output. \vfill{}
+the corresponding output.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.3]{img1.png}
+  \end{center}
+\end{figure}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.3]{img2.png}
+  \end{center}
+\end{figure}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.3]{img3.png}
+  \end{center}
+\end{figure}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.3]{img4.png}
+  \end{center}
+\end{figure}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.3]{img5.png}
+  \end{center}
+\end{figure}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.3]{img6.png}
+  \end{center}
+\end{figure}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.3]{img7.png}
+  \end{center}
+\end{figure}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.3]{img8.png}
+  \end{center}
+\end{figure}
 \end{enumerate}
 
 \end{document}
