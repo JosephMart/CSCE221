@@ -32,40 +32,42 @@ problem.
 (ADTs) \\ \ \\
 
 \begin{itemize}
-  \item Templated Doubly Linked List
-  \item Templated Linked Que
-  \item Templated Linked Stack
-  \item String
-  \item Vector
-  \item Token
+  \item \textbf{Templated Doubly Linked List}: a sequence of nodes where each node contains a pointer to the previous node and next node in the sequence. Since it is templated, a variety of data types can be passed in.
+  \item \textbf{Templated Linked Que:} a linear data structure where operations are performed based on first-in-first-out principle. Since it is templated, a variety of data types can be passed in.
+  \item \textbf{Templated Linked Stack:} a linear data structure where the operations are performed based on last-in-first-out principle. Since it is templated, a variety of data types can be passed in.
+  \item \textbf{String:} a container that holds an array of characters
+  \item \textbf{Vector:} a container that can hold a variety of data types. Vector has several built in functions. Also provides bounds error checking.
+  \item \textbf{Token:} a container that references a character to a value and/or weight.
 \end{itemize} \ \\
 \item Write about the ADTs implementation in C++. \\ \ \\
-Notice that during the evaluation process of an expression the stack
-data structure should be used.
 
 \begin{itemize}
-  \item Templated Doubly Linked List
-  \item Templated Linked Que
-  \item Templated Linked Stack
-  \item String
-  \item Vector
-  \item Token
+  \item \textbf{Templated Doubly Linked List:} a list of doubly linked nodes. This data type has a constructor, copy constructor, desctructor, assignment operator, get first node pointer, get after last node, check if list is empty, return first node, return last node, insert a new node to the first position, remove the first node, insert a node in the last position, and remove last node. An overloaded output stream operator was used to display the all the nodes in the list. Finally everything was templated for use with a variety of data types.
+  
+  \item \textbf{Templated Linked Que:} contains a private doubly linked list variable. Functions include a constructor, copy constructor, destructor, return first element in que, check if que is empty, enqueue an item, dequeue an item, and an accessor function for the doubly linked list. An overloaded output stream operator was used to display the all the elements in the que. Finally everything was templated for use with a variety of data types.
+  
+  \item \textbf{Templated Linked Stack:} contains a private doubly linked list variable. Functions include a constructor, destructor, check if stack is empty, push an element to the stack, pop the top element of the stack, get top of the stack, and an accessor function for the doubly linked list. An overloaded output stream operator was used to display the all the elements in the stack. Finally everything was templated for use with a variety of data types.
+  
+  \item \textbf{String:} a constant char array
+  
+  \item \textbf{Vector:} a container that holds a list of elements that can be accessed using an iterator.
+  
+  \item \textbf{Token:} a struct that I created to hold an elements kind, value, and weight. Functions include a checker if element is an operator, checker if element is  an operand, checker if an element is a number, checker if an element is a variable, setter functions that sets the value, function to convert character to a double, and a get operator weight function.
 \end{itemize} \ \\
-
 
 \item Describe algorithms used to solve the problem.\\ \ \\
 \begin{itemize}
-  \item $Parser::toPostfix()$
-  \item $Token::get_operator_weight()$
-  \item $Evaluator::evaluate$
+  \item $Parser::toPostfix()$ this functions converts a vector of tokens in infix form to an equivalent postfix form. This functions iterates through each token in the vector. If the token is an operand, enqueue the operand until the next item is not an operand. If the token was an close parenthesis, pop items off the stack and enqueue that item until a left parenthesis is reached. If the token is an open parenthesis, push the item to the stack. if the token is a \#, pop an item of the stack and enqueue it until the stack is empty. Else, pop an item off the stack and enqueue it until the top item of the stack's weight is greater or equal to the tokens weight. Then enqueue the item. Finally, pop items off the stack and enqueue them until the stack is empty. Return the que.
+  \item $Token::get\_operator\_weight()$ if kind is ( or ), weight is 1, if kind is $+$ or $-$, weight is 2, if kind is $*$ or $/$, weight is 3, if kind is \^{}, weight is 4, if kind is \~{}, weight is 5. Return weight
+  \item $Evaluator::evaluate:$ taken in operator, v1, and v2. If operator is $+$, add v1 and v2. If operator is $-$, subtract v2 from v1. If operator is $*$, multiply v1 and v2. If operator is \^{}, raise v1 to the power of v2. If operator is $/$ and v2 is not 0, divide v1 by v2. If v2 was 0, throw a division by 0 exception.
   \item $Evaluator::getValue()$
 \end{itemize} \ \\
 
 \item Analyze the algorithms according to assignment requirements. \\ \ \\
 \begin{itemize}
-  \item $Parser::toPostfix()$
-  \item $Token::get_operator_weight()$
-  \item $Evaluator::evaluate$
+  \item $Parser::toPostfix(): \; O(n)$
+  \item $Token::get\_operator\_weight(): \; O(1)$ 
+  \item $Evaluator::evaluate: \; O(1)$
   \item $Evaluator::getValue()$
 \end{itemize} \ \\
 
@@ -78,8 +80,10 @@ program such as classes used to implement the data structures or exceptions.\\ \
 \begin{itemize}
   \item Parser
   \item Evaluator
-  \item LinkedQue
-  \item LinkedStack
+  \item \textbf{Templated Linked Que:} contains a private doubly linked list variable. Functions include a constructor, copy constructor, destructor, return first element in que, check if que is empty, enqueue an item, dequeue an item, and an accessor function for the doubly linked list. An overloaded output stream operator was used to display the all the elements in the que. Finally everything was templated for use with a variety of data types.
+    
+    \item \textbf{Templated Linked Stack:} contains a private doubly linked list variable. Functions include a constructor, destructor, check if stack is empty, push an element to the stack, pop the top element of the stack, get top of the stack, and an accessor function for the doubly linked list. An overloaded output stream operator was used to display the all the elements in the stack. Finally everything was templated for use with a variety of data types.
+
   \item RuntimeException
 \end{itemize} \ \\
 

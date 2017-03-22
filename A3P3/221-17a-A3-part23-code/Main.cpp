@@ -21,7 +21,7 @@ int main() {
     bool infix = false;     // True if infix eq entered
     bool evaluated = false; // True if evalutation (5) has occured
     bool eCont = false;     // True if "Press enter to Continue" needs to be shown
-    string eq = "";              // Store infix equation
+    string eq = "";         // Store infix equation
     Parser par;             // Parser object
     double value;           // Store result of equation
 
