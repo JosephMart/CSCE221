@@ -1,0 +1,146 @@
+%% LyX 2.2.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm,headheight=0cm,headsep=0cm}
+
+\makeatletter
+\@ifundefined{date}{}{\date{}}
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title{The Programming Assignment Report Instructions\\
+CSCE 221}
+\maketitle
+\begin{enumerate}
+\item The description of an assignment problem.\\ \ \\
+
+The purpose of this assignment was to create a C++ program that would allow a user to enter an expression with or without variables in infix form. The simple calculator would then evaluate the expression by utilizing a stack, a que, and postfix form. The stack and que also used the templated linked list class created in part 1. \\ \ \\
+
+\item The description of data structures and algorithms used to solve the
+problem.
+
+\begin{enumerate}
+\item Provide definitions of data structures by using Abstract Data Types
+(ADTs) \\ \ \\
+
+\begin{itemize}
+  \item Templated Doubly Linked List
+  \item Templated Linked Que
+  \item Templated Linked Stack
+  \item String
+  \item Vector
+  \item Token
+\end{itemize} \ \\
+\item Write about the ADTs implementation in C++. \\ \ \\
+Notice that during the evaluation process of an expression the stack
+data structure should be used.
+
+\begin{itemize}
+  \item Templated Doubly Linked List
+  \item Templated Linked Que
+  \item Templated Linked Stack
+  \item String
+  \item Vector
+  \item Token
+\end{itemize} \ \\
+
+
+\item Describe algorithms used to solve the problem.\\ \ \\
+\begin{itemize}
+  \item $Parser::toPostfix()$
+  \item $Token::get_operator_weight()$
+  \item $Evaluator::evaluate$
+  \item $Evaluator::getValue()$
+\end{itemize} \ \\
+
+\item Analyze the algorithms according to assignment requirements. \\ \ \\
+\begin{itemize}
+  \item $Parser::toPostfix()$
+  \item $Token::get_operator_weight()$
+  \item $Evaluator::evaluate$
+  \item $Evaluator::getValue()$
+\end{itemize} \ \\
+
+\end{enumerate}
+\item A C++ organization and implementation of the problem solution 
+\begin{enumerate}
+\item Provide a list and description of classes or interfaces used by a
+program such as classes used to implement the data structures or exceptions.\\ \ \\
+
+\begin{itemize}
+  \item Parser
+  \item Evaluator
+  \item LinkedQue
+  \item LinkedStack
+  \item RuntimeException
+\end{itemize} \ \\
+
+\item Include in the report the class declarations from a header file (.h)
+and their implementation from a source file (.cpp). \vfill{}
+\item Provide features of the C++ programming paradigms like Inheritance
+or Polymorphism in case of object oriented programming, or Templates
+in the case of generic programming used in your implementation. \\ \ \\
+
+Templated
+\begin{itemize}
+  \item LinkedQue
+  \item LinkedStack
+\end{itemize}
+
+Inheritance
+\begin{itemize}
+  \item RuntimeException
+\end{itemize}\ \\
+\end{enumerate}
+\item A user guide description how to navigate your program with the instructions
+how to: 
+\begin{enumerate}
+\item compile the program: specify the directory and file names, etc.\vfill{}
+\item run the program: specify the name of an executable file. \vfill{}
+\pagebreak{}
+\end{enumerate}
+\item Specifications and description of input and output formats and files 
+\begin{enumerate}
+\item The type of files: keyboard, text files, etc (if applicable). \\ \ \\
+No input or output files \\ \ \\
+
+\item A file input format: when a program requires a sequence of input items,
+specify the number of items per line or a line termination. Provide
+a sample of a required input format. \vfill{}
+\item Discuss possible cases when your program could crash because of incorrect
+input (a wrong file name, strings instead of a number, or such cases
+when the program expects 10 items to read and it finds only 9.)\vfill{}
+\end{enumerate}
+\item Provide types of exceptions and their purpose in your program.
+\begin{enumerate}
+\item logical exceptions (such as deletion of an item from an empty container,
+etc.).\\ \ \\
+
+\begin{itemize}
+  \item QueueEmptyException
+  \item StackEmptyException
+\end{itemize} \ \\
+
+\item runtime exception (such as division by $0$, etc.)\\ \ \\
+
+\begin{itemize}
+  \item $DivisionByZeroException()$ in evaluator.h
+\end{itemize}\ \\
+
+\end{enumerate}
+\item Test your program for correctness using valid, invalid, and random
+inputs (e.g., insertion of an item at the beginning, at the end, or
+at a random place into a sorted vector). Include evidence of your
+testing, such as an output file or screen shots with an input and
+the corresponding output. \vfill{}
+\end{enumerate}
+
+\end{document}

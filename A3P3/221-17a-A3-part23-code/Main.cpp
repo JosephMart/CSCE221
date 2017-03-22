@@ -16,6 +16,7 @@ bool check_paren(std::string s);
 
 int main() {
     /* implement user menu */
+    system("clear");
     char input;             // Store users choice
     bool infix = false;     // True if infix eq entered
     bool evaluated = false; // True if evalutation (5) has occured
@@ -24,20 +25,31 @@ int main() {
     Parser par;             // Parser object
     double value;           // Store result of equation
 
+
     // Begin Menu loop
     do
     {
-        system("clear");
         eCont = false;
+        // Print Navigation to the User
+        std::cout << "CSCE 221 Postfix Calculator\n \tby Joseph Martinsen\n" << '\n';
+        if(!infix)
+            std::cout << "Start by entering the infix equation in option (1)\n";
+        if(infix)
+        {
+            std::cout << "Options (2)-(5) are now avaliable\n";
+            if(!evaluated)
+                std::cout << "Must evaluate (5) before displaying value (6)\n";
+        }
+        std::cout << '\n';
 
         // Print Menu to the User
         std::cout << "Choose one of the following options" << '\n'
-                  << "\t1: Read an infix expression from the keyboard" << '\n'
-                  << "\t2: Check if parenthesis are balanced correctly" << '\n'
-                  << "\t3: Display infix Expression" << '\n'
-                  << "\t4: Display postfix Expression" << '\n'
-                  << "\t5: Evaluate" << '\n'
-                  << "\t6: Display the value of an algebraic expression" << '\n'
+                  << "\t(1): Read an infix expression from the keyboard" << '\n'
+                  << "\t(2): Check if parenthesis are balanced correctly" << '\n'
+                  << "\t(3): Display infix Expression" << '\n'
+                  << "\t(4): Display postfix Expression" << '\n'
+                  << "\t(5): Evaluate" << '\n'
+                  << "\t(6): Display the value of an algebraic expression" << '\n'
                   << "Press q to quit\n" << '\n'
                   << "Choice: ";
         std::cin >> input;  // Get input from the User
@@ -126,7 +138,7 @@ int main() {
             eCont = true;
         } catch(...)
         {
-            std::cerr << "An unkown error has occured" << '\n';
+            std::cerr << "An unkown error has occured\n Please try again\n" << '\n';
             eCont = true;
         }
 
@@ -137,6 +149,7 @@ int main() {
             std::cout << "Press Enter to Continue..." << '\n';
             system("read");
         }
+        system("clear");
     } while(!((input == 'Q')||(input == 'q'))); // While User does not Quit
     return 0;
 }
