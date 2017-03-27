@@ -3,6 +3,7 @@
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist,listings}
 \usepackage{geometry}
 \geometry{verbose,tmargin=0.8in,bmargin=0.8in,lmargin=1in,rmargin=1in,headheight=0cm,headsep=0cm}
 \usepackage{babel}
@@ -85,7 +86,27 @@ Your Name  & ~~~~~~~~~~~~~~~~~~~~~~~~~~~ &  & ~~~~~~~~~~~~~~~~~~~~~ & Date  & ~~
 \item (15 points) Write a recursive function that counts the number of nodes
 in a singly linked list. Write a recurrence relation that represents
 your algorithm. Solve the relation and obtain the running time of
-the algorithm in Big-O. \vfill{}
+the algorithm in Big-O.
+\begin{enumerate}
+  \item 
+  \begin{lstlisting}[language=C++]
+  int nodeCounter(Node* n)
+  {
+    if(temp = = nullptr) { return 0; }
+
+    return nodeCounter(n->next()) + 1;
+  }
+  \end{lstlisting}
+  
+  \item
+  nodeCounter$(0) = 0$ \\
+  nodeCounter$(n) =$ nodeCounter$(n-1) + 1$ \\
+
+  \item
+  Solving the relation: nodeCounter$(n) = 0$ \\
+  The Big-$O: O(n)$
+\end{enumerate}
+
 \item (15 points) Write a recursive function that finds the maximum value
 in an array of int values without using any loops. Write a recurrence
 relation that represents your algorithm. Solve the relation and obtain
