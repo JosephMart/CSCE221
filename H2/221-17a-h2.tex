@@ -103,7 +103,17 @@ the algorithm in Big-O.
   nodeCounter$(n) =$ nodeCounter$(n-1) + 1$ \\
 
   \item
-  Solving the relation: nodeCounter$(n) = n$ \\
+  
+  \begin{align*}
+    T(n) \\
+    T(n-1) \\
+    T(n-2) \\
+    \cdots \\
+    T(0) \\
+    0
+  \end{align*}
+  
+  height of tree = nodeCounter$(n) = n$ \\
   The Big-$O: O(n)$
 \end{enumerate}
 
@@ -211,13 +221,19 @@ Divide and Conquer Method
   D(n) &= \theta (1) \\
   C(n) + D(n) &= \theta (n) \\
   T(n) &= 2 T\left (\dfrac{n}{2} \right) + \theta (n) \\
+  &O(\log_2(n)
 \end{align*}
 
-Master Theorem
-% \begin{align*}
-%   
-% \end{align*}
+Tree Method
 
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=.05]{./2017-03-271.png}
+    \caption{}
+    \label{fig:}
+  \end{center}
+\end{figure}
+$$O(\log_2(n)$$
 
 \item (10 points) R-10.17 p. 493\\
 For the following statements about red-black trees, provide a justification
