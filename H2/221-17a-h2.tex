@@ -103,27 +103,64 @@ the algorithm in Big-O.
   nodeCounter$(n) =$ nodeCounter$(n-1) + 1$ \\
 
   \item
-  Solving the relation: nodeCounter$(n) = 0$ \\
+  Solving the relation: nodeCounter$(n) = n$ \\
   The Big-$O: O(n)$
 \end{enumerate}
 
 \item (15 points) Write a recursive function that finds the maximum value
 in an array of int values without using any loops. Write a recurrence
 relation that represents your algorithm. Solve the relation and obtain
-the running time of the algorithm in Big-O. \vfill{}
+the running time of the algorithm in Big-O.
+\begin{enumerate}
+\item
+  \begin{lstlisting}[language=C++]
+int maxArray(int a[], int length)
+{
+    if (length == 1)
+        return a[0];
+
+    int maxNext = maxArray(a, length-1);
+
+    if (a[length-1] > maxNext)
+        return a[length-1];
+    return maxNext;
+}
+  \end{lstlisting}
+  
+  \item
+  maxArray$($array$, $size$) = maxArray$($array$, $size$-1) \\
+  maxArray($array$, 1) =$ a[0]$ \\
+
+  \item
+  Solving the relation: maxArray($array$, 1) =$ a[n]$ \\
+  The Big-$O: O(n)$
+\end{enumerate}
+
+
 \item (10 points) What data structure is most suitable to determine if a
 string s is a palindrome, that is, it is equal to its reverse. For
 example, \textquotedblleft racecar\textquotedblright{} and \textquotedblleft gohan
 gasalamiimalasagnahog\textquotedblright{} are palindromes. Justify
 your answer. Use Big-O notation to represent the efficiency of your
-algorithm. \vfill{}
+algorithm. \\ \ \\
+
+A que would be the most well suited ADT to determine if a string was a palindrome.
+The first half of the string would be enqued. Due to the last in first out nature of a que,
+by dequing and comparing the dequed item to the next item in the string, each comparison should return true if the string is in fact a palindrome.\\
+It would be $n$ for queing, $2n$ for dequing and comparing. This results in $3n$ which is $O(n)$ \\ \ \\
+
+
 \item (10 points) Describe how to implement the stack ADT using two queues.
 What is the running time of the push and pop functions in this case?
 \vfill{}
 \item (10 points) What is the best, worst and average running time of quick
 sort algorithm? Provide arrangement of the input and the selection
 of the pivot point at every case. Provide a recursive relation and
-solution for each case. \vfill{}
+solution for each case. \\
+
+Best and average case of quick sort is $O(log_2(n))$. Worse case is $O(n^2)$
+
+
 \item (10 points) What is the best, worst and average running time of merge
 sort algorithm? Use two methods for solving a recurrence relation
 for the average case to justify your answer. \vfill{}
@@ -132,10 +169,24 @@ For the following statements about red-black trees, provide a justification
 for each true statement and a counterexample for each false one.
 
 \begin{enumerate}
-\item A subtree of a red-black tree is itself a red-black tree.\vspace{0.5in}
-\item The sibling of an external node is either external or it is red.\vspace{0.5in}
-\item There is a unique (2,4) tree associated with a given red-black tree.\vspace{0.5in}
-\item There is a unique red-black tree associated with a given (2,4) tree.\vspace{0.5in}
+\item A subtree of a red-black tree is itself a red-black tree.\\
+False. A subtree with a red root must have a black root node
+
+\item The sibling of an external node is either external or it is red. \\
+True. If an external node was  Let an external node had a black, internal sibling and let h be the black depth of the external node.
+Then the black depth of the external nodes below the black, internal sibling would have black depth at least h+1 thereby violating the depth property of a red-black tree.
+The depth property says that all external nodes must have the same black depth, that is, the same number of black ancestors.
+
+
+\item There is a unique (2,4) tree associated with a given red-black tree.\\
+True.
+
+The given one means that Given a red-black tree T, there is a unique 2-3-4 tree T0 associated with T. Every node in the red-black tree with two red children is uniquely represented as a 4-node in T0, each node with one red child is uniquely represented as a 3-node in T0, and a node with no red children is uniquely represented as a 2-node in T
+
+
+\item There is a unique red-black tree associated with a given (2,4) tree.\\
+ False. A 3-node has two different possible ways of being shown in a red-black tree.
+ 
 \end{enumerate}
 \item (10 points) R-10.19 p. 493\\
 Consider a tree $T$ storing 100,000 entries. What is the worst-case
@@ -143,9 +194,12 @@ height of $T$ in the following cases?
 
 \begin{enumerate}
 \item $T$ is an AVL tree.\vspace{0.5in}
-\item $T$ is a (2,4) tree.\vspace{0.5in}
-\item $T$ is a red-black tree.\vspace{0.5in}
-\item $T$ is a binary search tree.\vspace{0.5in}
+\item $T$ is a (2,4) tree.\\
+
+\item $T$ is a red-black tree.\\
+99,999
+\item $T$ is a binary search tree.\\
+99,999
 \end{enumerate}
 \item (10 points) R-9.16 p. 418
 
