@@ -38,15 +38,15 @@ more Aggie Honor System Office \href{http://aggiehonor.tamu.edu/}{http://aggieho
 \end{quotation}
 \begin{tabular}{|c|c|c|c|}
 \hline 
-Type of sources  & ~~~~~~~~~~~~~~~~~~~~~~~ & ~~~~~~~~~~~~~~~~~~~~~~~~ & ~~~~~~~~~~~~~~~~~~~~~~~\tabularnewline
+Type of sources  & ~~~AVL Tree Info~~~~~ & ~~~~~~~~~~~~~~~~~~~~~~~~ & ~~~~~~~~~~~~~~~~~~~~~~~\tabularnewline
  &  &  & \tabularnewline
 \hline 
 \hline 
 People &  &  & \tabularnewline
  &  &  & \tabularnewline
 \hline 
-Web pages (provide URL)  &  &  & \tabularnewline
- &  &  & \tabularnewline
+Web pages (provide URL)  & http://pages.cs.wisc.edu/ &  & \tabularnewline
+ & ~ealexand/cs367/NOTES/AVL-Trees/index.html &  & \tabularnewline
 \hline 
 Printed material &  &  & \tabularnewline
  &  &  & \tabularnewline
@@ -197,13 +197,25 @@ Consider a tree $T$ storing 100,000 entries. What is the worst-case
 height of $T$ in the following cases?
 
 \begin{enumerate}
-\item $T$ is an AVL tree.\vspace{0.5in}
+\item $T$ is an AVL tree.
+\begin{align*}
+h &\le 2\log_2(n+2) \\
+h &\approx 33
+\end{align*}
+
 \item $T$ is a (2,4) tree.\\
+\begin{align*}
+h &< \log_{2}(n+1) \\
+h &\approx 17
+\end{align*}
 
 \item $T$ is a red-black tree.\\
-99,999
+\begin{align*}
+h &< 2\log_2(n+1) \\
+h &\approx 33
+\end{align*}
 \item $T$ is a binary search tree.\\
-99,999
+100,000
 \end{enumerate}
 \item (10 points) R-9.16 p. 418
 
