@@ -72,7 +72,7 @@ received any unauthorized help on this academic work.\textquotedblright{}
 }
 
 \begin{tabular}{cccccc}
-Your Name  & ~~~~~~~~~~~~~~~~~~~~~~~~~~~ &  & ~~~~~~~~~~~~~~~~~~~~~ & Date  & ~~~~~~~~~~~~~~~~~~~~\tabularnewline
+Your Name  & ~~~Joseph~~~~~~~ &  & ~~~~~~Martinsen~~~~~ & Date  & ~~~03/27/2017~~~~~~~\tabularnewline
 \end{tabular}\newpage{}
 
 \begin{center}
@@ -162,12 +162,63 @@ sort algorithm? Provide arrangement of the input and the selection
 of the pivot point at every case. Provide a recursive relation and
 solution for each case. \\
 
-Best and average case of quick sort is $O(log_2(n))$. Worse case is $O(n^2)$
+Worse case is $O(n^2)$
+\begin{align*}
+T(n)&=T(n-1)+n-1\\
+T(n)&=T(n-2)+n-1+n-2\\
+T(n)&=T(n-3)+3n-1-2-3\\
+T(n)&=T(1)+\sum_{i=0}^{n-1}(n-i) \\
+T(n)&= \dfrac{n(n-1)}{2} \\
+T(n)&=\dfrac{n^2-n}{2} \\
+&O(n)
+\end{align*}
 
+Best: $O(n\log{n})$
+\begin{align*}
+T(N)&=2T(\dfrac{n}{2})+n-1\\
+T(N)&=2(2T(\dfrac{n}{4})+\dfrac{n}{2}-1)+n-1\\
+T(N)&=4(2(\dfrac{n}{8})+\dfrac{n}{4}-1)+2n-3\\
+T(N)&=2^kT(\dfrac{n}{2^k})+kn-(2^n-1)\\
+T(1)&=0\\
+2^k&=n\\
+k&=\log_2n\\
+T(n)&=n\log_2n-n+1 \\
+&O(n\log{n})
+\end{align*}
+
+Average: $O(n\log{n})$
+\begin{align*}
+T(n)&=2T(\dfrac{n}{2})+n-1\\
+T(n)&=2(2T(\dfrac{n}{4})+\dfrac{n}{2}-1)+n-1\\
+T(n)&=4(2(\dfrac{n}{8})+\dfrac{n}{4}-1)+2n-3\\
+T(n)&=2^kT(\dfrac{n}{2^k})+kn-(2^k-1)\\
+T(1)&=0\\
+2^k&=n\\
+k&=\log_2n\\
+T(n)&=n\log_2n-n+1 \\
+&O(n\log{n})  
+\end{align*}
 
 \item (10 points) What is the best, worst and average running time of merge
 sort algorithm? Use two methods for solving a recurrence relation
-for the average case to justify your answer. \vfill{}
+for the average case to justify your answer.\\ \ \\
+
+Divide and Conquer Method
+\begin{align*}
+  a &= 2 \quad b = 2 \\
+  T(1) &= 0 \\
+  C(n) &= \theta (n) \\
+  D(n) &= \theta (1) \\
+  C(n) + D(n) &= \theta (n) \\
+  T(n) &= 2 T\left (\dfrac{n}{2} \right) + \theta (n) \\
+\end{align*}
+
+Master Theorem
+% \begin{align*}
+%   
+% \end{align*}
+
+
 \item (10 points) R-10.17 p. 493\\
 For the following statements about red-black trees, provide a justification
 for each true statement and a counterexample for each false one.
