@@ -177,15 +177,12 @@ for each true statement and a counterexample for each false one.
 False. A subtree with a red root must have a black root node
 
 \item The sibling of an external node is either external or it is red. \\
-True. If an external node was  Let an external node had a black, internal sibling and let h be the black depth of the external node.
-Then the black depth of the external nodes below the black, internal sibling would have black depth at least h+1 thereby violating the depth property of a red-black tree.
-The depth property says that all external nodes must have the same black depth, that is, the same number of black ancestors.
-
+True. If an external node had a black internal brother or sister, the black depth of the external nodes below the black brother or sister would be $h+1$ which is incorrect because all external nodes must have the same black height.
 
 \item There is a unique (2,4) tree associated with a given red-black tree.\\
 True.
 
-The given one means that Given a red-black tree T, there is a unique 2-3-4 tree T0 associated with T. Every node in the red-black tree with two red children is uniquely represented as a 4-node in T0, each node with one red child is uniquely represented as a 3-node in T0, and a node with no red children is uniquely represented as a 2-node in T
+A node in the red-black tree that contains two red children is represented as a 4-node in 2-4 tree. A node with one red child is represented as a 3-node in the 2-4 tree. A node with 0 red children is represented as a 2-node in the 2-4 tree.
 
 
 \item There is a unique red-black tree associated with a given (2,4) tree.\\
