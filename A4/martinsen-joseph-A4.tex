@@ -1,0 +1,200 @@
+%% LyX 2.2.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\renewcommand{\rmdefault}{cmr}
+\renewcommand{\sfdefault}{cmss}
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\usepackage{listings}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=0.5in}
+\usepackage{color}
+\usepackage{babel}
+\usepackage[unicode=true]
+ {hyperref}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Listing}
+
+\begin{document}
+\begin{center}
+\textbf{\textcolor{black}{\large{}CSCE 221 Assignment 4 Cover Page}}\textcolor{black}{}\\
+\textcolor{black}{\bigskip{}
+}
+\par\end{center}
+
+\textcolor{black}{First Name:\quad Joseph~~Last
+Name ~Martinsen~UIN~323009961~~\bigskip{}
+}
+
+\textcolor{black}{User Name ~~~~josephmart~~~~E-mail
+address~~josephmart@tamu.edu~~~\medskip{}
+}
+
+\textcolor{black}{Please list all sources in the table below including
+web pages which you used to solve or implement the current homework.
+If you fail to cite sources you can get a lower number of points or
+even zero, read more on Aggie Honor System Office website: }\texttt{\textcolor{black}{\href{http://aggiehonor.tamu.edu/}{http://aggiehonor.tamu.edu/}}}\textcolor{black}{\medskip{}
+\medskip{}
+}
+\noindent \begin{flushleft}
+\textcolor{black}{}%
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+\textcolor{black}{Type of sources } & \textcolor{black}{~~~~Stack Overflow~~} & \textcolor{black}{~~~~~~~~~~~~~~~~~~~~~~~~} & \textcolor{black}{~~~~~~~~~~~~~~~~~~~~~~~} & \textcolor{black}{~~~~~~~~~~~~~~~~~~~~~~~}\tabularnewline
+ &  &  &  & \tabularnewline
+\hline 
+\textcolor{black}{People} &  &  &  & \tabularnewline
+ &  &  &  & \tabularnewline
+\hline 
+\textcolor{black}{Web pages (provide URL) } &  &  &  & \tabularnewline
+ &  &  &  & \tabularnewline
+\hline 
+\textcolor{black}{Printed material} &  &  &  & \tabularnewline
+ &  &  &  & \tabularnewline
+\hline 
+\textcolor{black}{Other Sources } &  &  &  & \tabularnewline
+ &  &  &  & \tabularnewline
+\hline 
+\end{tabular}
+\par\end{flushleft}
+
+\textcolor{black}{\medskip{}
+\medskip{}
+}
+
+\noindent \textcolor{black}{I certify that I have listed all the sources
+that I used to develop the solutions/codes to the submitted work.}
+
+\noindent \textcolor{black}{\emph{On my honor as an Aggie, I have
+neither given nor received any unauthorized help on this academic
+work}}\textcolor{black}{.}
+
+\textcolor{black}{\bigskip{}
+\bigskip{}
+}
+
+\textcolor{black}{}%
+\begin{tabular}{cccccc}
+\textcolor{black}{Your Name } & \textcolor{black}{~~~~~Joseph~~} &  & \textcolor{black}{~~~Martinse~~~~~} & \textcolor{black}{Date } & \textcolor{black}{~~~03/30/2017~~~~}\tabularnewline
+\end{tabular}\textcolor{black}{\pagebreak{}}
+
+\begin{center}
+\textcolor{black}{\large{}CSCE 221 \textemdash{} Programming Assignment
+4, Spring 2017 (100 points)}
+\par\end{center}{\large \par}
+
+\begin{center}
+\textbf{\textcolor{black}{Due: March 30th at 11:59 pm}}
+\par\end{center}
+
+\begin{center}\Huge\bfseries
+Report\\
+\vspace{15pt}
+\small Joseph Martinsen \\
+PA4\\
+File Parsing and Regex
+\end{center}
+
+\noindent \begin{flushleft}
+\textbf{\textcolor{black}{\large{}File Parsing and Regex \textendash{}
+Assignment Description (100 points)}}
+\par\end{flushleft}{\large \par}
+
+A very common task in Computer Science is the reading in and parsing
+of text. One of the most powerful tools at a programmer\textquoteright s
+disposal to aid in this task is regex (which stands for REGular EXpressions). 
+
+\begin{enumerate}
+\item What is stored in \textquotedblleft \texttt{matches}\textquotedblright ? \\
+  99
+\item What does \textquotedblleft\texttt{\textbackslash{}d}\textquotedblright{} mean? \\
+Digit
+
+\item Modify the regex pattern to retrieve a two-digit number and the word
+\texttt{thanks} in the string. Test your pattern for correctness. \\ Check the code
+
+\item (25 points) Compile and run the following code, then answer the questions: 
+\begin{enumerate}
+\item What does \textquotedblleft\texttt{\textbackslash{}s\textbackslash{}S}\textquotedblright{}
+mean? \\
+\textquotedblleft\texttt{\textbackslash{}s}\textquotedblright{} means white space \\
+\textquotedblleft\texttt{\textbackslash{}S}\textquotedblright{} means no white space.
+
+
+
+\item What is stored in \texttt{matches{[}0{]}}? \\
+\texttt{matches{[}0{]}}  is "<title>This is a title</title>"
+
+\item Why is \texttt{matches{[}1{]}} different? \\
+Because there are two regexs patterns in "R"(<title>([\textbackslash s\textbackslash S]+)</title>)"
+
+
+\item Modify the regex pattern to retrieve only the items inside of the
+header tag but not inside of the title tag. Test your pattern for
+correctness.\\
+Check the code
+\end{enumerate}
+\newpage{}
+\item (40 points) Download the following text file: \href{http://courses.cs.tamu.edu/teresa/csce221/pdf/stroustrup.txt}{stroustrup.txt} 
+
+Write a program using regex that will go through the text file and
+print out the file name of every hyperlinked powerpoint file. (Hint1:
+an HTML hyperlink uses the format \texttt{<a href=\textquotedblright ...>...</a>}.
+Hint2. The powerpoint file extension is \texttt{.ppt}) \\
+Check the code
+\end{enumerate}
+
+\begin{itemize}
+\item Your C++ source code with the header block including: your name, user
+name, section number and e-mail address
+\lstinputlisting[language=C++,basicstyle={\small\ttfamily},showstringspaces=false]{./code/main.cpp}
+
+
+\begin{itemize}
+\item Description of input and output data. List all restrictions and assumptions
+that you have imposed on your input data and program. \\
+
+Input data is an html page and output is powerpoint names.
+
+\item Write your regex patterns used for parsing the strings in the programs
+above. Explain their syntax. \\
+
+Part 3: Search for digit then digit for the first part. Next it looked for string literal \texttt{thanks} \\
+
+Part 4: Had two regex patterns. First it searched for any white-space or non-white-space from title to head. Next regex pattern searched for any white-space or non-white-space from head to title. \\
+
+Part 5: This part finds characters between <a href=" and " that end in ppt.
+This search loops, once a match has been found, it will then continue searching.
+
+
+\item What is the purpose of the functions \texttt{regex\_search()} and
+\texttt{regex\_match()}. \\
+
+\texttt{regex\_match()}\\
+Checks whether there is a match between the regular expression e, and all of the character sequence \\
+
+\texttt{regex\_search()}\\
+Checks if there is a sub-sequence in the string that matches the regular expression.
+
+\item Which C++ features or standard library classes have you used in your
+program?
+\begin{lstlisting}[language=C++,basicstyle={\small\ttfamily},showstringspaces=false]
+#include <iostream>
+#include <string>
+#include <regex>
+#include <fstream>
+\end{lstlisting} 
+\end{itemize}
+\end{itemize}
+
+\end{document}

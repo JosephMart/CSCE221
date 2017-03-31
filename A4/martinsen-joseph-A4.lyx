@@ -1,16 +1,20 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/joseph/Documents/CSCE221/A4/
 \textclass article
+\begin_preamble
+\usepackage{babel}
+
+\end_preamble
 \use_default_options false
 \maintain_unincluded_children false
 \language english
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding iso8859-15
+\fontencoding T1
 \font_roman "cmr" "default"
 \font_sans "cmss" "default"
 \font_typewriter "courier" "default"
@@ -28,16 +32,25 @@
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks 0
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 0
+\pdf_pdfborder 0
+\pdf_colorlinks 0
+\pdf_backref section
+\pdf_pdfusetitle 0
 \papersize default
 \use_geometry true
 \use_package amsmath 1
-\use_package amssymb 1
+\use_package amssymb 0
 \use_package cancel 0
-\use_package esint 0
-\use_package mathdots 1
+\use_package esint 1
+\use_package mathdots 0
 \use_package mathtools 0
-\use_package mhchem 1
+\use_package mhchem 0
 \use_package stackrel 0
 \use_package stmaryrd 0
 \use_package undertilde 0
@@ -82,317 +95,92 @@
 \align center
 
 \series bold
-\size large
+
 \color black
+
+\size large
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
 CSCE 221 Assignment 4 Cover Page
+\color inherit
+
 \series default
-\size default
+
+\color black
+
+\color inherit
 
 \begin_inset Newline newline
 \end_inset
 
+ 
+\color black
 
 \begin_inset VSpace bigskip
 \end_inset
 
-
+ 
+\color inherit
+ 
 \end_layout
 
 \begin_layout Standard
 
 \color black
-First Name
+First Name:
+\begin_inset space \quad{}
+
+\end_inset
+
+Joseph
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
-\end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
 \end_inset
 
 Last Name 
 \begin_inset space ~
+
 \end_inset
 
-
+Martinsen
 \begin_inset space ~
-\end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
 \end_inset
 
 UIN
 \begin_inset space ~
+
+\end_inset
+
+323009961
+\begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
-\end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
 \end_inset
 
 
 \begin_inset VSpace bigskip
 \end_inset
 
+ 
+\color inherit
 
 \end_layout
 
@@ -401,255 +189,87 @@ UIN
 \color black
 User Name 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
+\end_inset
+
+josephmart
+\begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
-\end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
 \end_inset
 
 E-mail address
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
+\end_inset
+
+josephmart@tamu.edu
+\begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
-\begin_inset space ~
+\begin_inset VSpace medskip
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset VSpace defskip
-\end_inset
-
+ 
+\color inherit
 
 \end_layout
 
 \begin_layout Standard
 
 \color black
-Please list all sources in the table below including web pages which you
- used to solve or implement the current homework.
- If you fail to cite sources you can get a lower number of points or even
- zero, read more on Aggie Honor System Office website: 
+Please list all sources in the table below including web pages which you used to solve or implement the current homework. If you fail to cite sources you can get a lower number of points or even zero, read more on Aggie Honor System Office website: 
+\color inherit
+
 \family typewriter
+
+\color black
 
 \begin_inset CommandInset href
 LatexCommand href
@@ -658,450 +278,481 @@ target "http://aggiehonor.tamu.edu/"
 \end_inset
 
 
+\color inherit
+
 \family default
 
-\begin_inset VSpace defskip
+\color black
+
+\begin_inset VSpace medskip
 \end_inset
 
-
-\begin_inset VSpace defskip
+ 
+\begin_inset VSpace medskip
 \end_inset
 
-
+ 
+\color inherit
+ 
 \end_layout
 
 \begin_layout Standard
-\noindent
 \align left
+\noindent
 
 \color black
-\begin_inset Tabular
+
+\color inherit
+
+\begin_inset Tabular 
 <lyxtabular version="3" rows="10" columns="5">
-<features tabularvalignment="middle">
+<features rotate="0" tabularvalignment="middle" tabularwidth="0pt">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
 Type of sources 
+\color inherit
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
+
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
+\end_inset
+
+Stack Overflow
+\begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
+\color inherit
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
+
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
+\color inherit
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
+
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
+\color inherit
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
+
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
+
+\color inherit
 
 \end_layout
 
@@ -1109,432 +760,276 @@ Type of sources
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
 
-\end_layout
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
 People
+\color inherit
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
 
-\end_layout
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
 Web pages (provide URL) 
+\color inherit
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
 
-\end_layout
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
 Printed material
+\color inherit
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
 
-\end_layout
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color black
-Other Sources 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
+\color black
+Other Sources 
+\color inherit
+ 
 \end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
 
-\end_layout
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
 
 \end_inset
 </cell>
@@ -1549,13 +1044,16 @@ Other Sources
 \begin_layout Standard
 
 \color black
-\begin_inset VSpace defskip
+
+\begin_inset VSpace medskip
 \end_inset
 
-
-\begin_inset VSpace defskip
+ 
+\begin_inset VSpace medskip
 \end_inset
 
+ 
+\color inherit
 
 \end_layout
 
@@ -1563,40 +1061,53 @@ Other Sources
 \noindent
 
 \color black
-I certify that I have listed all the sources that I used to develop the
- solutions/codes to the submitted work.
+I certify that I have listed all the sources that I used to develop the solutions/codes to the submitted work.
+\color inherit
+
 \end_layout
 
 \begin_layout Standard
 \noindent
+
+\color black
 
 \emph on
-\color black
-On my honor as an Aggie, I have neither given nor received any unauthorized
- help on this academic work
+On my honor as an Aggie, I have neither given nor received any unauthorized help on this academic work
 \emph default
+
+\color inherit
+
+\color black
 .
-\end_layout
-
-\begin_layout Standard
-
-\color black
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\begin_inset VSpace bigskip
-\end_inset
-
+\color inherit
 
 \end_layout
 
 \begin_layout Standard
 
 \color black
-\begin_inset Tabular
+
+\begin_inset VSpace bigskip
+\end_inset
+
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+ 
+\color inherit
+
+\end_layout
+
+\begin_layout Standard
+
+\color black
+
+\color inherit
+
+\begin_inset Tabular 
 <lyxtabular version="3" rows="1" columns="6">
-<features tabularvalignment="middle">
+<features rotate="0" tabularvalignment="middle" tabularwidth="0pt">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1607,10 +1118,12 @@ On my honor as an Aggie, I have neither given nor received any unauthorized
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
 Your Name 
+\color inherit
+ 
 \end_layout
 
 \end_inset
@@ -1618,117 +1131,47 @@ Your Name
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
+
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
+\end_inset
+
+Joseph
+\begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
+\color inherit
+ 
 \end_layout
 
 \end_inset
@@ -1736,102 +1179,57 @@ Your Name
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
+
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
+\end_inset
+
+Martinse
+\begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
+\color inherit
+ 
 \end_layout
 
 \end_inset
@@ -1839,10 +1237,12 @@ Your Name
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
 Date 
+\color inherit
+ 
 \end_layout
 
 \end_inset
@@ -1850,88 +1250,46 @@ Date
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \color black
+
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
+\end_inset
+
+03/30/2017
+\begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
 \begin_inset space ~
+
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
+\color inherit
 
 \end_layout
 
@@ -1942,6 +1300,8 @@ Date
 
 \end_inset
 
+
+\color black
 
 \begin_inset Newpage pagebreak
 \end_inset
@@ -1949,244 +1309,204 @@ Date
 
 \color inherit
 
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 \align center
 
-\size large
 \color black
+
+\size large
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
 CSCE 221 — Programming Assignment 4, Spring 2017 (100 points)
+\color inherit
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size large
+
 \end_layout
 
 \begin_layout Standard
 \align center
 
 \series bold
+
 \color black
 Due: March 30th at 11:59 pm
+\color inherit
+
+\series default
+ 
 \end_layout
 
 \begin_layout Standard
 \align center
 
+\size giant
+
 \series bold
+Report
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset VSpace 15pt
+\end_inset
+
+ 
 \size small
-\color black
-\begin_inset VSpace defskip
+Joseph Martinsen 
+\begin_inset Newline newline
 \end_inset
 
+ PA4
+\begin_inset Newline newline
+\end_inset
 
+ File Parsing and Regex 
 \end_layout
 
 \begin_layout Standard
-\noindent
 \align left
+\noindent
 
 \series bold
-\size large
+
+\size small
+
+\series bold
+
 \color black
+
+\size large
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
 File Parsing and Regex – Assignment Description (100 points)
+\color inherit
+
+\series bold
+ 
 \end_layout
 
 \begin_layout Standard
-A very common task in Computer Science is the reading in and parsing of
- text.
- One of the most powerful tools at a programmer’s disposal to aid in this
- task is regex (which stands for REGular EXpressions).
- 
+
+\series bold
+
+\size small
+
+\size large
+
 \end_layout
 
-\begin_layout Enumerate
-Read about text manipulation and regex: 
-\begin_inset CommandInset href
-LatexCommand href
-name "Programming Chap. 2&3 (PPT)"
-target "http://stroustrup.com/Programming/23_text.ppt"
+\begin_layout Standard
 
+\series bold
+
+\size small
+A very common task in Computer Science is the reading in and parsing of text. One of the most powerful tools at a programmer
+\begin_inset Quotes ers
 \end_inset
 
- 
+s disposal to aid in this task is regex (which stands for REGular EXpressions).
 \end_layout
 
 \begin_layout Enumerate
-Reference for C++ regex grammar: 
-\begin_inset CommandInset href
-LatexCommand href
-name "regex reference"
-target "http://www.cplusplus.com/reference/regex/ECMAScript/"
 
+\series bold
+
+\size small
+What is stored in 
+\begin_inset Quotes grd
 \end_inset
 
- 
-\end_layout
 
-\begin_layout Enumerate
-(15 points) Compile and run the following code, then answer the questions:
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-What is stored in “
 \family typewriter
 matches
 \family default
-”?
+”? 
+\begin_inset Newline newline
+\end_inset
+
+ 99 
 \end_layout
 
 \begin_layout Enumerate
-What does “
+
+\series bold
+
+\size small
+What does 
+\begin_inset Quotes grd
+\end_inset
+
+
 \family typewriter
 
 \backslash
 d
 \family default
 ” mean? 
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset listings
-lstparams "language={C++},basicstyle={\small\ttfamily},showstringspaces=false"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-#include <iostream>
-\end_layout
-
-\begin_layout Plain Layout
-
-#include <string> 
-\end_layout
-
-\begin_layout Plain Layout
-
-#include <regex> 
-\end_layout
-
-\begin_layout Plain Layout
-
-using namespace std; 
-\end_layout
-
-\begin_layout Plain Layout
-
-int main() { 
-\end_layout
-
-\begin_layout Plain Layout
-
-   regex pattern{R"(
-\backslash
-d
-\backslash
-d)"}; 
-\end_layout
-
-\begin_layout Plain Layout
-
-   string to_search = "I would like the number 98" 
-\end_layout
-
-\begin_layout Plain Layout
-
-              " to be found and printed, thanks."; 
-\end_layout
-
-\begin_layout Plain Layout
-
-   smatch matches; 
-\end_layout
-
-\begin_layout Plain Layout
-
-   regex_search(to_search, matches, pattern); 
-\end_layout
-
-\begin_layout Plain Layout
-
-   for (auto match : matches) { 
-\end_layout
-
-\begin_layout Plain Layout
-
-      cout << match << endl; 
-\end_layout
-
-\begin_layout Plain Layout
-
-   } 
-\end_layout
-
-\begin_layout Plain Layout
-
-   return 0; 
-\end_layout
-
-\begin_layout Plain Layout
-
-} 
-\end_layout
-
+\begin_inset Newline newline
 \end_inset
 
-
+ Digit
 \end_layout
 
-\begin_layout Standard
-Note that in C/C++ two subsequent strings as above are combined into one
- string by the compiler.
-\end_layout
-
-\end_deeper
 \begin_layout Enumerate
+
+\series bold
+
+\size small
 Modify the regex pattern to retrieve a two-digit number and the word 
 \family typewriter
 thanks
 \family default
- in the string.
- Test your pattern for correctness.
-\series bold
-\size small
-\color black
-
-\begin_inset VSpace defskip
+ in the string. Test your pattern for correctness. 
+\begin_inset Newline newline
 \end_inset
 
-
-\begin_inset VSpace defskip
-\end_inset
-
-
-\begin_inset VSpace defskip
-\end_inset
-
-
+ Check the code
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Enumerate
-(25 points) Compile and run the following code, then answer the questions:
- 
+
+\series bold
+
+\size small
+(25 points) Compile and run the following code, then answer the questions: 
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-What does “
+
+\series bold
+
+\size small
+What does 
+\begin_inset Quotes grd
+\end_inset
+
+
 \family typewriter
 
 \backslash
@@ -2195,143 +1515,108 @@ s
 S
 \family default
 ” mean? 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Quotes grd
+\end_inset
+
+
+\family typewriter
+
+\backslash
+s
+\family default
+” means white space 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Quotes grd
+\end_inset
+
+
+\family typewriter
+
+\backslash
+S
+\family default
+” means no white space.
 \end_layout
 
 \begin_layout Enumerate
+
+\series bold
+
+\size small
 What is stored in 
 \family typewriter
 matches[0]
 \family default
 ? 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\family typewriter
+matches[0]
+\family default
+ is "<title>This is a title</title>"
 \end_layout
 
 \begin_layout Enumerate
+
+\series bold
+
+\size small
 Why is 
 \family typewriter
 matches[1]
 \family default
  different? 
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_deeper
-\begin_layout Standard
-\begin_inset listings
-lstparams "language={C++},basicstyle={\small\ttfamily},showstringspaces=false"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-#include <iostream> 
-\end_layout
-
-\begin_layout Plain Layout
-
-#include <string> 
-\end_layout
-
-\begin_layout Plain Layout
-
-#include <regex>
-\end_layout
-
-\begin_layout Plain Layout
-
-using namespace std; 
-\end_layout
-
-\begin_layout Plain Layout
-
-int main() { 
-\end_layout
-
-\begin_layout Plain Layout
-
-   regex pattern{R"(<title>([
+ Because there are two regexs patterns in "R"(<title>([
 \backslash
 s
 \backslash
-S]+)</title>)"}; 
+S]+)</title>)"
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Enumerate
 
-   string to_search = "<html><head>Wow such a header <title>This is a title</tit
-le>"
-\end_layout
+\series bold
 
-\begin_layout Plain Layout
-
-                    "So top</head>Much body</html>"; 
-\end_layout
-
-\begin_layout Plain Layout
-
-   smatch matches; 
-\end_layout
-
-\begin_layout Plain Layout
-
-   regex_search(to_search, matches, pattern); 
-\end_layout
-
-\begin_layout Plain Layout
-
-   cout << matches[0] << endl; 
-\end_layout
-
-\begin_layout Plain Layout
-
-   cout << matches[1] << endl; 
-\end_layout
-
-\begin_layout Plain Layout
-
-   return 0; 
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
+\size small
+Modify the regex pattern to retrieve only the items inside of the header tag but not inside of the title tag. Test your pattern for correctness.
+\begin_inset Newline newline
 \end_inset
 
-
+ Check the code 
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
-Modify the regex pattern to retrieve only the items inside of the header
- tag but not inside of the title tag.
- Test your pattern for correctness.
-\series bold
-\size small
-\color black
-
-\begin_inset VSpace defskip
-\end_inset
-
-
-\begin_inset VSpace defskip
-\end_inset
-
-
-\begin_inset VSpace defskip
-\end_inset
-
-
-\end_layout
-
+\begin_deeper
 \begin_layout Standard
+
+\series bold
+
+\size small
+
 \begin_inset Newpage newpage
 \end_inset
 
-
+ 
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
+
+\series bold
+
+\size small
 (40 points) Download the following text file: 
 \begin_inset CommandInset href
 LatexCommand href
@@ -2340,69 +1625,153 @@ target "http://courses.cs.tamu.edu/teresa/csce221/pdf/stroustrup.txt"
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-Write a program using regex that will go through the text file and print
- out the file name of every hyperlinked powerpoint file.
- (Hint1: an HTML hyperlink uses the format 
-\family typewriter
-<a href=”...>...</a>
-\family default
-.
- Hint2.
- The powerpoint file extension is 
-\family typewriter
-.ppt
-\family default
-)
-\end_layout
-
-\end_deeper
 \begin_layout Standard
 
 \series bold
-What to submit to CSNet?
+
+\size small
+Write a program using regex that will go through the text file and print out the file name of every hyperlinked powerpoint file. (Hint1: an HTML hyperlink uses the format 
+\family typewriter
+<a href=”...>...</a>
+\family default
+. Hint2. The powerpoint file extension is 
+\family typewriter
+.ppt
+\family default
+) 
+\begin_inset Newline newline
+\end_inset
+
+ Check the code 
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
-Your C++ source code with the header block including: your name, user name,
- section number and e-mail address
+
+\series bold
+
+\size small
+Your C++ source code with the header block including: your name, user name, section number and e-mail address 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+lstinputlisting
 \end_layout
 
-\begin_layout Itemize
-(20 points) A report which should consists of the following parts:
+\end_inset
+
+[language=C++,basicstyle=
+\family typewriter
+
+\size small
+,showstringspaces=false]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+./code/main.cpp
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-The cover page.
+
+\series bold
+
+\size small
+Description of input and output data. List all restrictions and assumptions that you have imposed on your input data and program. 
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+
+\size small
+Input data is an html page and output is powerpoint names.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
-Assignment number and its description.
+
+\series bold
+
+\size small
+Write your regex patterns used for parsing the strings in the programs above. Explain their syntax. 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+
+\size small
+Part 3: Search for digit then digit for the first part. Next it looked for string literal 
+\family typewriter
+thanks
+\family default
  
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Description of data structures and algorithms used by your program.
+\begin_layout Standard
+
+\series bold
+
+\size small
+Part 4: Had two regex patterns. First it searched for any white-space or non-white-space from title to head. Next regex pattern searched for any white-space or non-white-space from head to title. 
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Description of input and output data.
- List all restrictions and assumptions that you have imposed on your input
- data and program.
- 
+\begin_layout Standard
+
+\series bold
+
+\size small
+Part 5: This part finds characters between <a href=" and " that end in ppt. This search loops, once a match has been found, it will then continue searching.
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
-Write your regex patterns used for parsing the strings in the programs above.
- Explain their syntax.
-\end_layout
 
-\begin_layout Itemize
+\series bold
+
+\size small
 What is the purpose of the functions 
 \family typewriter
 regex_search()
@@ -2411,16 +1780,81 @@ regex_search()
 \family typewriter
 regex_match()
 \family default
-.
+. 
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Which C++ features or standard library classes have you used in your program?
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+
+\size small
+
+\family typewriter
+regex_match()
+\family default
+
+\begin_inset Newline newline
+\end_inset
+
+ Checks whether there is a match between the regular expression e, and all of the character sequence 
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+
+\size small
+
+\family typewriter
+regex_search()
+\family default
+
+\begin_inset Newline newline
+\end_inset
+
+ Checks if there is a sub-sequence in the string that matches the regular expression.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
-Write your conclusion.
- 
+
+\series bold
+
+\size small
+Which C++ features or standard library classes have you used in your program? 
+\begin_inset listings
+lstparams "language=C++,basicstyle={\small\ttfamily},showstringspaces=false"
+inline false
+status collapsed
+
+\begin_layout Plain Layout
+#include <iostream>
+\end_layout
+
+\begin_layout Plain Layout
+#include <string>
+\end_layout
+
+\begin_layout Plain Layout
+#include <regex>
+\end_layout
+
+\begin_layout Plain Layout
+#include <fstream>
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
