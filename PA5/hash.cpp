@@ -62,46 +62,44 @@ int hash::ItemsAtIndex(int index)
     return count;
 }
 
-void hash::PrintTable()
+void hash::PrintTableInfo()
 {
-    int number;
+    int count = 0;
+    int items;
+    int max = ItemsAtIndex(0);
+    int min = ItemsAtIndex(0);
 
     for (int i = 0; i < tableSize; i++)
     {
-        number = ItemsAtIndex(i);
-        std::cout << "------------------------" << '\n';
-        std::cout << "index:" << i << '\n';
-        std::cout << "UIN:" << HashTable[i]->uin << '\n';
-        std::cout << "Grade:" << HashTable[i]->grade << '\n';
-        std::cout << "# of Items in Bucket:" << number << '\n';
-        std::cout << "------------------------" << '\n';
+        items = ItemsAtIndex(i);
+        count += items;
+
+        if (max < items)
+            max = items;
+
+        if(min > items)
+            min = items;
     }
+
+    std::cout << "Hash Table Info" << '\n' << '\n'
+              << "Size: " << tableSize << '\n'
+              << "Min Items in Bucket: " << min << '\n'
+              << "Max Items in Bucket: " << max << '\n'
+              << "Avg Items in Bucket: " << count/tableSize << '\n';
 }
 
 int hash::searchGrade(unsigned int uin)
 {
     int index = Hash(uin);
     bool uinFound = false;
-
-    int grade = 0;
     item* Ptr = HashTable[index];
+    
     while (Ptr != NULL)
     {
         if (Ptr->uin == uin)
-        {
-            // std::cout << "UIN: " << uin << '\n';
-            grade = Ptr->grade;
-            return grade;
-            // std::cout << "Grade: " << grade << '\n';
-            uinFound = true;
-        }
+            return Ptr->grade;
+
         Ptr = Ptr->next;
     }
-
-    return grade;
-    // if (uinFound)
-    // {
-    //     std::cout << "UIN: " << uin << '\n';
-    //     std::cout << "Grade: " << grade << '\n';
-    // }
+    return 0;
 }

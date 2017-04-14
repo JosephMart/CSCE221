@@ -7,7 +7,7 @@
 class hash
 {
     private:
-        static const int tableSize = 20;
+        static const int tableSize = 17;
 
         struct item {
             unsigned int uin;
@@ -24,15 +24,8 @@ class hash
         int Hash(unsigned int uin);
         void insert(unsigned int uin, int grade);
         int ItemsAtIndex(int index);
-        void PrintTable();
-
-        int size();
-        // std::vector<LinkedList<HashNode>> get_vec();
+        void PrintTableInfo();
         int searchGrade(unsigned int key);
-
-        // LinkedList<HashNode>& operator [] (int index);
 };
-
-// std::ostream& operator << (std::ostream& out, HashTable& htable);
 
 #endif
