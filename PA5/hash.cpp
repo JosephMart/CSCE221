@@ -1,5 +1,8 @@
 #include "hash.h"
 
+#include <string>
+#include <iostream>
+
 hash::hash()
 {
     for (int i = 0; i < tableSize; i++) {
@@ -93,7 +96,7 @@ int hash::searchGrade(unsigned int uin)
     int index = Hash(uin);
     bool uinFound = false;
     item* Ptr = HashTable[index];
-    
+
     while (Ptr != NULL)
     {
         if (Ptr->uin == uin)

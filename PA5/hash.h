@@ -2,12 +2,11 @@
 #define HASH
 
 #include <string>
-#include <iostream>
 
 class hash
 {
     private:
-        static const int tableSize = 17;
+        static const int tableSize = 100;
 
         struct item {
             unsigned int uin;
