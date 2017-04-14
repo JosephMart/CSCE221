@@ -77,3 +77,31 @@ void hash::PrintTable()
         std::cout << "------------------------" << '\n';
     }
 }
+
+int hash::searchGrade(unsigned int uin)
+{
+    int index = Hash(uin);
+    bool uinFound = false;
+
+    int grade = 0;
+    item* Ptr = HashTable[index];
+    while (Ptr != NULL)
+    {
+        if (Ptr->uin == uin)
+        {
+            // std::cout << "UIN: " << uin << '\n';
+            grade = Ptr->grade;
+            return grade;
+            // std::cout << "Grade: " << grade << '\n';
+            uinFound = true;
+        }
+        Ptr = Ptr->next;
+    }
+
+    return grade;
+    // if (uinFound)
+    // {
+    //     std::cout << "UIN: " << uin << '\n';
+    //     std::cout << "Grade: " << grade << '\n';
+    // }
+}

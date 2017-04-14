@@ -28,7 +28,7 @@ class hash
 
         int size();
         // std::vector<LinkedList<HashNode>> get_vec();
-        void* search(const unsigned int key);
+        int searchGrade(unsigned int key);
 
         // LinkedList<HashNode>& operator [] (int index);
 };
