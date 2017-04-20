@@ -36,7 +36,6 @@ void Graph::buildGraph(std::ifstream& in)
         }
         i++;
     }
-	// std::cin.ignore().get();
 }
 
 void Graph::displayGraph()
