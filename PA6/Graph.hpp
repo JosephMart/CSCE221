@@ -7,6 +7,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <algorithm>
 
 #include "Edge.hpp"
 #include "Vertex.hpp"
@@ -22,6 +23,7 @@ public:
     Graph(std::vector<std::list<Edge>> adjl); // constructor from adjl = adjacency list (optional)
     void buildGraph(std::ifstream& in);  // build a graph from the adjacency list
     void displayGraph();  // display the graph
+    void grouping();
 };
 
 #endif /* Graph_hpp */

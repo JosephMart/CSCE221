@@ -15,6 +15,7 @@ int main(int argc, const char* argv[])
         Graph g;
         g.buildGraph(in);
         g.displayGraph();
+        g.grouping();
         return 0;
     }
     catch (std::exception& error)
