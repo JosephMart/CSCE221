@@ -111,4 +111,42 @@ void Graph::displayGraph()
 			std::cout << e.end << '\t';
 		std::cout << '\n';
 	}
+
+    std::cout << "Calculating shortest distance" << '\n';
+    shortestDistance(vertices.at(0), vertices.at(2));
+}
+
+std::vector<Vertex> Graph::shortestDistance(Vertex v1, Vertex v2)
+{
+    std::vector<Vertex> visited;
+    std::queue<Vertex> q;
+    Vertex current = v1;
+    visited.push_back(current);
+    q.push(current);
+
+    while(!q.empty())
+    {
+        current = q.front();
+        q.pop();
+        if(current == v2)
+        {
+             Vertex temp = visited.at(std::find(visited.begin(), visited.end(), v2.label) - visited.begin());
+             std::cout << "From " << v1.label << " to " << v2.label << '\n';
+             while (temp.label != v1.label) {
+                 std::cout << temp.label << '\n';
+                 temp = visited.at(std::find(visited.begin(), visited.end(), temp.parentLabel) - visited.begin());
+             }
+             std::cout << temp.label << '\n';
+            return visited;
+        }
+        for(Edge e : current.edgeList)
+        {
+            if(std::find(visited.begin(), visited.end(), e.end) == visited.end())
+            {
+                visited.push_back(Vertex(e.end, e.start ));
+                q.push(Vertex(e.end, vertices[e.end].edgeList));
+            }
+        }
+    }
+    return visited;
 }

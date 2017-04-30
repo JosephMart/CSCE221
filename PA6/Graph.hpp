@@ -24,6 +24,7 @@ public:
     void buildGraph(std::ifstream& in);  // build a graph from the adjacency list
     void displayGraph();  // display the graph
     void grouping();
+    std::vector<Vertex> shortestDistance(Vertex v1, Vertex v2);
 };
 
 #endif /* Graph_hpp */
