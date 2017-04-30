@@ -15,7 +15,21 @@ int main(int argc, const char* argv[])
         Graph g;
         g.buildGraph(in);
         g.displayGraph();
-        g.grouping();
+        if (g.grouping()) {
+            int val1 = 0;
+            int val2 = 0;
+
+            std::cout << "Input any 2 Cities to find shortest path" << '\n';
+            while (std::cin >> val1 && std::cin >> val2) {
+                if(val1 <= g.vertices.size() && val1 >= 0 && val1 >= 0 && val2 < g.vertices.size())
+                {
+                    g.printShortestDistance(val1,val2);
+                    std::cout << "2 More" << '\n';
+                } else
+                    break;
+            }
+        }
+
         return 0;
     }
     catch (std::exception& error)

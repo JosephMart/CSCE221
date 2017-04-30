@@ -38,7 +38,7 @@ void Graph::buildGraph(std::ifstream& in)
     }
 }
 
-void Graph::grouping()
+bool Graph::grouping(bool print)
 {
     std::vector<int> group_a;
     std::vector<int> group_b;
@@ -76,15 +76,16 @@ void Graph::grouping()
         }
         else
         {
-            broke = true;
-            std::cout << "The graph can not be seperated into 2 groups" << '\n';
+            if(print)
+                std::cout << "The graph can not be seperated into 2 groups" << '\n';
+            return false;
         }
     }
 
-    if (!broke)
-    {
-        int max = group_a.size() > group_b.size() ? group_a.size() : group_b.size();
+    int max = group_a.size() > group_b.size() ? group_a.size() : group_b.size();
 
+    if (print)
+    {
         std::cout << "The graph can be seperated into 2 groups\n" << '\n'
                   <<"Group A\t" << "Group B\t" << '\n';
 
@@ -100,6 +101,7 @@ void Graph::grouping()
             std::cout << '\n';
         }
     }
+    return true;
 }
 
 void Graph::displayGraph()
@@ -111,9 +113,14 @@ void Graph::displayGraph()
 			std::cout << e.end << '\t';
 		std::cout << '\n';
 	}
+}
 
-    std::cout << "Calculating shortest distance" << '\n';
-    shortestDistance(vertices.at(0), vertices.at(2));
+void Graph::printShortestDistance(int v1, int v2)
+{
+    if(!grouping(false)) {return;}
+    std::cout << "Calculating shortest distance from " << v1
+              << " to " << v2 << '\n';
+    shortestDistance(vertices.at(v2), vertices.at(v1));
 }
 
 std::vector<Vertex> Graph::shortestDistance(Vertex v1, Vertex v2)
@@ -131,9 +138,8 @@ std::vector<Vertex> Graph::shortestDistance(Vertex v1, Vertex v2)
         if(current == v2)
         {
              Vertex temp = visited.at(std::find(visited.begin(), visited.end(), v2.label) - visited.begin());
-             std::cout << "From " << v1.label << " to " << v2.label << '\n';
              while (temp.label != v1.label) {
-                 std::cout << temp.label << '\n';
+                 std::cout << temp.label << " --> ";
                  temp = visited.at(std::find(visited.begin(), visited.end(), temp.parentLabel) - visited.begin());
              }
              std::cout << temp.label << '\n';

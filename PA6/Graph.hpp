@@ -23,8 +23,9 @@ public:
     Graph(std::vector<std::list<Edge>> adjl); // constructor from adjl = adjacency list (optional)
     void buildGraph(std::ifstream& in);  // build a graph from the adjacency list
     void displayGraph();  // display the graph
-    void grouping();
+    bool grouping(bool print = true);
     std::vector<Vertex> shortestDistance(Vertex v1, Vertex v2);
+    void printShortestDistance(int v1, int v2);
 };
 
 #endif /* Graph_hpp */
