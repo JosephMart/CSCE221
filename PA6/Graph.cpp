@@ -37,49 +37,44 @@ bool Graph::grouping(bool print)
     std::vector<int> group_a;
     std::vector<int> group_b;
 
-    for(Vertex v : vertices)
+    std::vector<int> color = std::vector<int>(vertices.size());
+    for(unsigned int i = 0; i < color.size(); i++)
+        color[i] = -1;
+
+    color[0] = 1;
+
+    std::queue<Vertex> q;
+    q.push(vertices[0]);
+
+    while(!q.empty())
     {
-        // Check if vertex is not in either group_a or group_b
-        if(std::find(group_a.begin(), group_a.end(), v.label) == group_a.end() && std::find(group_b.begin(), group_b.end(), v.label) == group_b.end())
+        Vertex v = q.front();
+        q.pop();
+
+        for(Edge e : v.edgeList)
         {
-            group_a.push_back(v.label);
-            for(Edge e : v.edgeList)
+            if(color[e.end] == -1)
             {
-                if(std::find(group_b.begin(), group_b.end(), e.end) == group_b.end()) // if not found
-                    group_b.push_back(e.end);
+                color[e.end] = 1 - color[e.start];
+                q.push(vertices[e.end]);
             }
+            else if(color[e.end] == color[e.start])
+                return false;
         }
-        // Check if vertex is in group_a and not group_b
-        else if(std::find(group_a.begin(), group_a.end(), v.label) != group_a.end() && std::find(group_b.begin(), group_b.end(), v.label) == group_b.end())
-        {
-            for(Edge e : v.edgeList)
-            {
-                if(std::find(group_b.begin(), group_b.end(), e.end) == group_b.end()) // if not found
-                    group_b.push_back(e.end);
-            }
-        }
-        // Check if vertex is in group_b and not group_a
-        else if(std::find(group_a.begin(), group_a.end(), v.label) == group_a.end() && std::find(group_b.begin(), group_b.end(), v.label) != group_b.end())
-        {
-            for(Edge e : v.edgeList)
-            {
-                if(std::find(group_a.begin(), group_a.end(), e.end) == group_a.end()) // if not found
-                    group_a.push_back(e.end);
-            }
-        }
+    }
+    for(unsigned int i = 0; i < color.size(); i++)
+    {
+        if(color[i] == 1)
+            group_a.push_back(i);
         else
-        {
-            if(print)
-                std::cout << "The graph can not be seperated into 2 groups" << '\n';
-            return false;
-        }
+            group_b.push_back(i);
     }
 
     int max = group_a.size() > group_b.size() ? group_a.size() : group_b.size();
 
     if (print)
     {
-        std::cout << "The graph can be seperated into 2 groups\n" << '\n'
+        std::cout << "\nThe graph can be seperated into 2 groups.\n" << '\n'
                   <<"Group A\t" << "Group B\t" << '\n';
 
         for (int i = 0; i < max; i++) {
@@ -94,6 +89,7 @@ bool Graph::grouping(bool print)
             std::cout << '\n';
         }
     }
+    std::cout << '\n';
     return true;
 }
 
