@@ -42,11 +42,10 @@ bool Graph::grouping(bool print)
 {
     std::vector<int> group_a;
     std::vector<int> group_b;
-    bool broke = false;
 
     for(Vertex v : vertices)
     {
-        // if not in either group_a or group_b
+        // Check if vertex is not in either group_a or group_b
         if(std::find(group_a.begin(), group_a.end(), v.label) == group_a.end() && std::find(group_b.begin(), group_b.end(), v.label) == group_b.end())
         {
             group_a.push_back(v.label);
@@ -56,7 +55,7 @@ bool Graph::grouping(bool print)
                     group_b.push_back(e.end);
             }
         }
-        // if in group_a and not group_b
+        // Check if vertex is in group_a and not group_b
         else if(std::find(group_a.begin(), group_a.end(), v.label) != group_a.end() && std::find(group_b.begin(), group_b.end(), v.label) == group_b.end())
         {
             for(Edge e : v.edgeList)
@@ -65,7 +64,7 @@ bool Graph::grouping(bool print)
                     group_b.push_back(e.end);
             }
         }
-        // if in group_b and not group_a
+        // Check if vertex is in group_b and not group_a
         else if(std::find(group_a.begin(), group_a.end(), v.label) == group_a.end() && std::find(group_b.begin(), group_b.end(), v.label) != group_b.end())
         {
             for(Edge e : v.edgeList)
