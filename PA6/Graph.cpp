@@ -14,26 +14,20 @@ Graph::Graph(std::vector<std::list<Edge>> adjl)
 
 void Graph::buildGraph(std::ifstream& in)
 {
-    std::string line;
-    int i = 0;
+    int i = 1;
+    int buf, vertsNumber;
+    in >> vertsNumber;
+    for(int j = 0; j < vertsNumber; j++)
+        vertices.push_back(Vertex(j));
+    in >> vertsNumber;
 
-    while(in.good())
+    while(in.good() && i <= vertices.size())
     {
-        getline(in, line);
-        if(i == 0)
+		while (in >> buf && buf != -1)
         {
-            int vertsNumber = line[0] - '0';
-            for(int j = 0; j < vertsNumber; j++)
-                vertices.push_back(Vertex(j));
-        } else if (i <= vertices.size())
-        {
-			int pos = i-1;
-			int buf;
-			std::stringstream ss(line);
-			while (ss >> buf && buf != -1)
-				vertices.at(pos).connectTo(buf);
-			adj_list.push_back(vertices.at(pos).edgeList);
+            vertices.at(i-1).connectTo(buf);
         }
+		adj_list.push_back(vertices.at(i-1).edgeList);
         i++;
     }
 }
