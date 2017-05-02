@@ -59,7 +59,13 @@ bool Graph::grouping(bool print)
                 q.push(vertices[e.end]);
             }
             else if(color[e.end] == color[e.start])
+            {
+                if (print) {
+                    std::cout << "\nThe graph can not be seperated into 2 groups.\n";
+                }
                 return false;
+
+            }
         }
     }
     for(unsigned int i = 0; i < color.size(); i++)
